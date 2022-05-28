@@ -1,0 +1,241 @@
+$primary-color: #f8efe6;
+$primary-dark: #333;
+$secondary-color: #fec5bb;
+
+main {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+
+  img {
+    cursor: pointer;
+  }
+
+  .blog-container {
+    text-align: justify;
+    position: relative;
+    // Special CSS for opening a full screen image
+    .opened-img {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      overflow: hidden;
+      height: 100vh;
+      // background-color: rgba($color: #000000, $alpha: 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 11;
+      // display: none;
+      visibility: collapse;
+
+      .btn-div {
+        position: relative;
+
+        button {
+          position: fixed;
+          right: 2rem;
+          top: 1rem;
+          width: 2rem;
+          height: 2rem;
+          border: none;
+          background: transparent;
+          font-size: 2rem;
+          color: $primary-color;
+          z-index: 15;
+
+          i {
+            background: transparent;
+          }
+
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .img-container {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        position: relative;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+          background: tran;
+        }
+
+        img {
+          padding-top: 1rem;
+          background: transparent;
+          width: 90%;
+          height: 90%;
+          object-fit: contain;
+          z-index: 12;
+        }
+
+        p {
+          padding: 2rem;
+          color: $primary-color;
+          z-index: 12;
+          background: transparent;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color: #000000, $alpha: 0.8);
+        }
+      }
+
+      &.active {
+        background: transparent;
+        visibility: visible;
+      }
+    }
+
+    h2 {
+      font-size: 4rem;
+      text-transform: uppercase;
+    }
+
+    .blog-sections {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .text-section {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        text-align: justify;
+      }
+
+      .media-section {
+        margin-bottom: 1rem;
+
+        .image-container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+
+          // For images
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            max-width: 40rem;
+            max-height: 40rem;
+          }
+
+          small {
+            text-align: center;
+            display: block;
+            font-size: 1rem;
+          }
+        }
+
+        // for Iframe
+        .iframe-container {
+          padding-top: 30px;
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 56.25%;
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+
+          small {
+            text-align: center;
+            display: block;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .media-group-section {
+        width: 100%;
+
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .image-group {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+
+          small {
+            text-align: center;
+            display: block;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// for media queries
+// For Tablets
+// @media only screen and (min-width: 980px) and (max-width: 1023px) { -- original tablet
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+}
+
+// // For mobile Landscape
+// @media only screen and (min-width: 501px) and (max-width: 767px) {
+// }
+
+// for typical mobile devices
+@media only screen and (max-width: 767px) {
+  main {
+    // Special CSS for opening a full screen image
+    .opened-img {
+      .img-container {
+        p {
+          padding: 1rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .blog-container {
+      .blog-sections {
+        .media-group-section {
+          width: 90%;
+          .image-group {
+            display: grid;
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+}

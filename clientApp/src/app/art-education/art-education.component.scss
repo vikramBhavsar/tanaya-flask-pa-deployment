@@ -1,0 +1,253 @@
+$image-width: 30rem;
+$image-height: 30rem;
+$primary-color: #f8efe6;
+$primary-dark: #333;
+$secondary-color: #fec5bb;
+
+.container {
+  color: $primary-dark;
+  height: 100vh;
+  position: relative;
+  text-align: justify;
+
+  // Special CSS for opening a full screen image
+  .opened-img {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    // background-color: rgba($color: #000000, $alpha: 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 11;
+    // display: none;
+    visibility: collapse;
+
+    .btn-div {
+      position: relative;
+
+      button {
+        position: fixed;
+        right: 2rem;
+        top: 1rem;
+        width: 2rem;
+        height: 2rem;
+        border: none;
+        background: transparent;
+        font-size: 2rem;
+        color: $primary-color;
+        z-index: 15;
+
+        i {
+          background: transparent;
+        }
+
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .img-container {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      position: relative;
+      padding: 1rem;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & > * {
+        background: tran;
+      }
+
+      img {
+        padding-top: 1rem;
+        background: transparent;
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        z-index: 12;
+      }
+
+      p {
+        padding: 2rem;
+        color: $primary-color;
+        z-index: 12;
+        background: transparent;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+      }
+    }
+
+    &.active {
+      background: transparent;
+      visibility: visible;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-dark;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  p {
+    text-align: justify;
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  .art-container {
+    height: 100%;
+    overflow-y: none;
+    margin: 0px 1rem;
+
+    // ** this is main project heading
+    h1 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      letter-spacing: 0.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    // Project section for multiple images
+    .project-section-multiple-photos-layed {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 2rem;
+
+      h2 {
+        padding: 1rem;
+        font-size: 2rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+
+      .section-contents {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        box-sizing: border-box;
+        gap: 5px;
+
+        .image-section {
+          display: grid;
+          grid-template-columns: 1fr;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+
+          small {
+            text-align: center;
+            padding: 1rem;
+          }
+        }
+
+        .video-section {
+          display: grid;
+          grid-template-columns: 1fr;
+
+          .iframe-container {
+            padding-top: 30px;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+
+            iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+
+          small {
+            text-align: center;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// for media queries
+// For Tablets
+// @media only screen and (min-width: 980px) and (max-width: 1023px) { -- original tablet
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    // Special CSS for opening a full screen image
+    .opened-img {
+      .img-container {
+        p {
+          padding: 1rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .art-container {
+      // Project section for multiple images
+      .project-section-multiple-photos-layed {
+        .section-contents {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+}
+
+// // For mobile Landscape
+// @media only screen and (min-width: 501px) and (max-width: 767px) {
+// }
+
+// for typical mobile devices
+@media only screen and (max-width: 767px) {
+  .container {
+    // Special CSS for opening a full screen image
+    .opened-img {
+      .img-container {
+        p {
+          padding: 1rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .art-container {
+      // Project section for multiple images
+      .project-section-multiple-photos-layed {
+        .section-contents {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+<main>
+  <div class="blog-container">
+    <h2>{{ currentBlog.blogName }}</h2>
+  </div>
+
+  <div
+    class="all-sections"
+    *ngFor="let sect of currentBlog.blog_sections;"
+  >
+    <div [ngSwitch]="sect.sectionType">
+      <div class="text-section" *ngSwitchCase="'T'">
+        <small> Section ID: {{ sect.id }}</small>
+        <p [innerHTML]="sect.sectionText | markdown"></p>
+        <button (click)="editSection(sect.id)">Edit</button>
+        <button (click)="deleteSection(sect.id)">Delete</button>
+
+        <!--  For editing text -->
+        <div class="active-section" *ngIf="controlbooleans[2] && sect.id == editingID.toString()">
+          <small>Edit Your Contents here:</small>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            [formControl]="editingSectionText"
+          ></textarea>
+          <button (click)="updateTextSection(sect.id)">Save</button>
+        </div>
+      </div>
+
+      <div class="image-section" *ngSwitchCase="'I'">
+        <small> Section ID: {{ sect.id }}</small>
+        <img src="{{ sect.mediaURL }}" alt="" />
+        <small [innerHTML]="sect.mediaDes | markdown"></small>
+        <div class="button-group">
+          <button (click)="deleteSection(sect.id)">Delete</button>
+        </div>
+      </div>
+
+      <div class="image-section" *ngSwitchCase="'V'">
+        <small> Section ID: {{ sect.id }}</small>
+        <small [innerHTML]="sect.mediaDes | markdown"></small>
+        <div class="iframe-container">
+          <iframe
+            [src]="sect.videoURL | safeUrl: 'resourceUrl'"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="button-group">
+          <button (click)="deleteSection(sect.id)">Delete</button>
+        </div>
+      </div>
+
+      <div class="group-section" *ngSwitchCase="'MI'">
+        <small> Section ID: {{ sect.id }}</small>
+
+        <div class="image-group">
+          <div class="image-item" *ngFor="let medi of sect.media_group_section">
+            <img src="{{ medi.mediaURL }}" />
+            <small [innerHTML]="medi.mediaDes | markdown"></small>
+            <i
+              class="fa-solid fa-trash"
+              (click)="deleteMediaGroupElement(medi.id)"
+            >
+              <p>Delete</p></i
+            >
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="active-section-media">
+          <small>New Group Section</small>
+          <input type="text" [formControl]="mediaDescription">
+          <label for="">
+            <input
+              type="file"
+              (change)="fileUploadInitiated($event)"
+              accept="image/jpg, image/jpeg"
+            />
+          </label>
+
+          <button (click)="saveMediaInGroup(true,sect.id)">Save</button>
+        </div>
+
+        <div class="button-group">
+          <button (click)="createMediaGroup()">Add Media</button>
+          <button (click)="deleteSection(sect.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="active-section" *ngIf="controlbooleans[1]">
+    <p>Add New Text Section in your blog</p>
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      [formControl]="newSectionText"
+    ></textarea>
+    <button (click)="saveSection(true)">Save</button>
+  </div>
+
+  <div class="active-section-media" *ngIf="controlbooleans[3]">
+    <p>Add new Media</p>
+    {{ isVideo }}
+    <label for="">
+      <input
+        type="checkbox"
+        (click)="toggleMediaType()"
+        id="isVideo"
+        name="isVideo"
+      />
+      Is Video?
+    </label>
+
+    <div *ngIf="isVideo; then VideoUpload; else ImageUpload"></div>
+    <ng-template #VideoUpload>
+      <label for="">Enter the Media Description</label>
+      <input type="text" [formControl]="mediaDescription" />
+
+      <label for="">Enter The Video Link (embded)</label>
+      <input type="text" [formControl]="VideoURL" />
+    </ng-template>
+    <ng-template #ImageUpload>
+      <label for="">Enter the Media Description</label>
+      <input type="text" [formControl]="mediaDescription" />
+      <input type="file" (change)="fileUploadInitiated($event)" accept="image/jpg, image/jpeg"/>
+    </ng-template>
+
+    <button (click)="saveMediaSection(true)">Save</button>
+  </div>
+
+  <button (click)="createTextSection()">Add Section</button>
+
+  <button (click)="createMediaSection()">Add Media</button>
+
+  <button (click)="createMediaGroupSection()">Add Media Group Section</button>
+</main>

@@ -1,0 +1,179 @@
+$primary-color: #f8efe6;
+$primary-dark: #333;
+$secondary-color: #fec5bb;
+
+.goToMainPage{
+    letter-spacing: 2px;
+    padding: 1rem;
+    font-weight: normal;
+    font-size: 2rem;
+    background: $secondary-color;
+
+    a{
+    cursor: pointer;
+        background: transparent;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+main{
+
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 1rem;
+    box-sizing: border-box;
+
+
+    h2{
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: normal;
+        letter-spacing: 10px
+
+    }
+
+    .division{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .project-list , .blog-list{
+
+             background-color: $secondary-color;
+
+            width: 80%;
+            margin: 2rem;
+            ul{
+                // display: flex;
+                // flex-direction: row;
+                // justify-content: space-around;
+                // flex-wrap: wrap;
+                
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
+                padding: 2rem;
+                height: 100%;
+                align-items: center;
+                background-color: transparent;
+                text-decoration: none;
+                list-style: none;
+
+                li{
+                    text-decoration: none;
+                    background: transparent;
+                    a{
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: $primary-dark;
+                        background: transparent;
+
+                        &:hover{
+                             background: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .create-project{
+            width: 80%;
+            max-width: 30rem;
+
+            form{
+                display: grid;
+                grid-template-columns: 1fr;
+
+                label{
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                }
+
+                input{
+                    &:focus{
+                        outline: none;
+                    }
+
+                    border: 1px rgba($color: $primary-dark, $alpha: 0.8) solid;
+                    border-radius: 5px;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+
+                textarea{
+                    &:focus{
+                        outline: none;
+                    }
+
+                    border: 1px rgba($color: $primary-dark, $alpha: 0.8) solid;
+                    border-radius: 5px;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                button{
+                    padding: 1rem;
+                    background-color: $primary-dark;
+                    color: $primary-color;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+            }
+            margin: 1rem;
+        }
+
+        .create-blog{
+            width: 80%;
+            max-width: 30rem;
+
+            margin: 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            label{
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+
+            input{
+                &:focus{
+                    outline: none;
+                }
+
+                border: 1px rgba($color: $primary-dark, $alpha: 0.8) solid;
+                border-radius: 5px;
+                padding: 1rem;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+
+            button{
+                padding: 1rem;
+                background-color: $primary-dark;
+                color: $primary-color;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                border: none;
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+.container {
+  width: 80%;
+  height: 100%;
+  min-height: 40rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+
+
+
+
+  .content {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .inside-content {
+        margin-bottom: 2rem;
+      .with-image {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        width: 100%;
+
+        .text-section {
+          grid-row-start: 1;
+        }
+
+        .image-side {
+          grid-row-start: 1;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+    .inside-content:nth-of-type(even) {
+      .with-image {
+        grid-template-columns: 1fr 2fr;
+        .text-section {
+          text-align: left;
+          grid-column-start: 2;
+        }
+
+        .image-side {
+          grid-column-start: 1;
+        }
+      }
+    }
+
+    .inside-content:nth-of-type(odd) {
+      .with-image {
+        grid-template-columns: 2fr 1fr;
+        .text-section {
+          text-align: right;
+          grid-column-start: 1;
+        }
+
+        .image-side {
+          grid-column-start: 2;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// For mobile phones
+@media only screen and (max-width: 767px) {
+    .container {
+        .content {
+          .inside-content {
+            .with-image {
+              grid-template-columns: 1fr;
+      
+              .text-section {
+                grid-row-start: 1;
+              }
+      
+              .image-side {
+                grid-row-start: 2;
+              }
+            }
+          }
+      
+          .inside-content:nth-of-type(even) {
+            .with-image {
+                grid-template-columns: 1fr;
+              .text-section {
+                text-align: left;
+                grid-column-start: 1;
+              }
+      
+              .image-side {
+                grid-column-start: 1;
+              }
+            }
+          }
+      
+          .inside-content:nth-of-type(odd) {
+            .with-image {
+                grid-template-columns: 1fr;
+              .text-section {
+                text-align: left;
+                grid-column-start: 1;
+              }
+      
+              .image-side {
+                grid-column-start: 1;
+              }
+            }
+          }
+        }
+      }
+  }

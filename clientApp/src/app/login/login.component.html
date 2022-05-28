@@ -1,0 +1,19 @@
+<main>
+    <div class="login-form">
+        <a routerLink="/home"><img src="assets/Images/tanaya_name.png" alt="" /></a>
+        <hr>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+            <label for="loginUsername">Username: </label>
+            <input id="loginUsername" type="text" formControlName="loginUsername">
+          
+            <label for="loginPassword">Password: </label>
+            <input id="loginPassword" type="password" formControlName="loginPassword">
+
+            <button type="submit" [disabled]="!loginForm.valid">Login</button>
+        </form>
+        <div class="form-error" *ngIf="error_message.length > 0">
+            <p>{{error_message}}</p>
+        </div>
+    </div>
+</main>

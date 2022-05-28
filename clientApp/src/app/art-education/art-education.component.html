@@ -1,0 +1,76 @@
+<div class="container">
+    <!-- Image Modal to view enlarged Image. -->
+    <div class="opened-img" #imgModal>
+      <div class="btn-div">
+        <button (click)="closeModalImage()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+  
+      <div class="img-container">
+        <img src="{{ curImgLink }}" alt="" />
+        <p>{{ curImgStatus }}</p>
+        <!-- <p [innerHTML]="curImgStatus | markdown"></p> -->
+      </div>
+    </div>
+  
+    <!-- This div wil contain all the gallery section -->
+    <div class="art-container">
+      <h1>{{ artProject.projectName }}</h1>
+      <p
+        [innerHTML]="
+        artProject.projectDescription | markdown
+        "
+      ></p>
+      
+      <div class="project-section-multiple-photos-layed">
+        <!-- Section header will always be there -->
+
+        <div class="section-contents">
+
+          <!-- Showing the images in grid format -->
+          <div *ngFor="let imageItem of artProject.art_media">
+            <!-- Below code is distinct for IMAGES AND VIDEO TOGER -->
+            <div
+              *ngIf="
+                imageItem.isVideo;
+                then videoBlockMG;
+                else imgBlockMG
+              "
+            ></div>
+            <ng-template #videoBlockMG>
+              <div class="video-section">
+                <div class="iframe-container">  
+                  <iframe
+                    [src]="imageItem.videoUrl | safeUrl: 'resourceUrl'"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <small
+                  [innerHTML]="imageItem.mediaDescription | markdown"
+                ></small>
+              </div>
+            </ng-template>
+            <ng-template #imgBlockMG>
+              <div class="image-section">
+                <img
+                  src="{{ imageItem.mediaFile }}"
+                  (click)="
+                    openImage(imageItem.mediaFile, imageItem.mediaDescription)
+                  "
+                  alt=""
+                />
+                <small
+                  [innerHTML]="imageItem.mediaDescription | markdown"
+                ></small>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  

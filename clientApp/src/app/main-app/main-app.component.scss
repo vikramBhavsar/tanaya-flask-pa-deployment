@@ -1,0 +1,393 @@
+$image-width: 30rem;
+$image-height: 30rem;
+$primary-color: #f8efe6;
+$primary-dark: #333;
+$secondary-color: #fec5bb;
+
+.container {
+  color: $primary-dark;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+
+
+  a {
+    text-decoration: none;
+    color: $primary-dark;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  p{
+    text-align: justify;
+  }
+
+  img{
+    cursor: pointer;
+  }
+
+  .main-header {
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    
+    img{
+      height: 8rem;
+    }
+  }
+
+  // This is the hamburger menu
+  .phone-menu {
+    display: none;
+    button {
+      position: fixed;
+      cursor: pointer;
+      right: 1rem;
+      top: 1rem;
+      width: 2rem;
+      height: 2rem;
+      border: none;
+      background-color: rgba($color: white, $alpha: 0.8);
+      border-radius: 5px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 7;
+      box-sizing: border-box;
+
+      i {
+        font-size: 1.5rem;
+        width: fit-content;
+        background: transparent;
+      }
+    }
+  }
+
+  // Phone side bar in for mobile
+  .phone-side-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    background-image: url('/static/assets/Images/bg_2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    // either color or image
+    // background-color: $secondary-color;
+    z-index: 6;
+    visibility: visible;
+
+    .side-bar-menu {
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      // height: 100%;
+      overflow-y: auto;
+
+      ul {
+        background: transparent;
+        list-style: none;
+
+        li {
+          margin-top: 1rem;
+          background: transparent;
+
+          h3 {
+            font-size: 2.5rem;
+          }
+
+          ul {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+
+            li {
+              margin-top: 1rem;
+
+              & .active {
+                // border-left: 2px $primary-dark solid;
+                // border: 2px $primary-dark solid;
+                background-color: $primary-dark;
+                color: $primary-color;
+                padding: 0.5rem;
+                // padding-left: 2rem;
+              }
+            }
+          }
+
+          a {
+            // background: transparent;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Active class for switching css
+  .phone-side-menu-active {
+    transform: translateX(0%);
+  }
+
+  // This is the main section where side bar and gallery go.
+  .divide-section {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    overflow: hidden;
+    padding: 0rem;
+    margin: 0rem;
+
+    .side-bar {
+      overflow-y: auto;
+      // height: 100vh;
+      height: calc(100vh - 4rem);
+      margin: 1rem;
+      padding: 1rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+
+      ul {
+        text-decoration: none;
+        list-style: none;
+
+        li {
+          text-decoration: none;
+
+          .main-header{
+            object-fit: cover;
+            width: 10rem;
+          }
+
+
+          ul {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+
+            li {
+              margin-top: 1rem;
+
+              & .active {
+                // border-left: 2px $primary-dark solid;
+                // border: 2px $primary-dark solid;
+                background-color: $primary-dark;
+                color: $primary-color;
+                line-height: 3px;
+                padding: 2px;
+                padding-left: 0.5rem;
+              }
+            }
+          }
+
+          a {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+
+    .main-app-child-container {
+        height: 100%;
+        overflow-y: auto;
+    }
+  }
+}
+
+// for media queries
+// For Tablets
+// @media only screen and (min-width: 980px) and (max-width: 1023px) { -- original tablet
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+    $image-width: 30rem;
+    $image-height: 30rem;
+  
+    .container {
+      // This is the hamburger menu
+      .phone-menu {
+        display: block;
+      }
+  
+      // This is the main section where side bar and gallery go.
+      .divide-section {
+        display: grid;
+        grid-template-columns: 1fr;
+  
+        .side-bar {
+          display: none;
+        }
+  
+        .gallery-container {
+  
+  
+          // Project section for single photos with description
+          .project-section-single-photo {
+            grid-template-columns: 1fr;
+  
+            .description-divide {
+              grid-template-columns: 1fr;
+  
+              .img-overlay {
+                padding: 1rem;
+  
+                .img-description-short {
+                  small {
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+  
+              .img-description-long {
+                padding: 1rem;
+                font-size: 1.2rem;
+              }
+            }
+          }
+  
+          //Project section for multiple image with description
+          .project-section-multiple-photos {
+            grid-template-columns: 1fr;
+  
+            .description-divide {
+              display: grid;
+              grid-template-columns: 1fr;
+  
+              .img-overlay {
+                .img-description-short {
+                  small {
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+  
+              .img-description-long {
+                padding: 1rem;
+                font-size: 1.2rem;
+              }
+            }
+          }
+  
+          // Project section for multiple images
+          .project-section-multiple-photos-layed {
+            grid-template-columns: 1fr;
+  
+            .section-contents {
+              grid-template-columns: 1fr 1fr;
+  
+              .image-section {
+                padding: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+// // For mobile Landscape
+// @media only screen and (min-width: 501px) and (max-width: 767px) {
+// }
+
+// for typical mobile devices
+@media only screen and (max-width: 767px) {
+  $image-width: 30rem;
+  $image-height: 30rem;
+
+  .container {
+    // This is the hamburger menu
+    .phone-menu {
+      display: block;
+    }
+
+    // This is the main section where side bar and gallery go.
+    .divide-section {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .side-bar {
+        display: none;
+      }
+
+      .gallery-container {
+
+
+        // Project section for single photos with description
+        .project-section-single-photo {
+          grid-template-columns: 1fr;
+
+          .description-divide {
+            grid-template-columns: 1fr;
+
+            .img-overlay {
+              padding: 1rem;
+
+              .img-description-short {
+                small {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+
+            .img-description-long {
+              padding: 1rem;
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        //Project section for multiple image with description
+        .project-section-multiple-photos {
+          grid-template-columns: 1fr;
+
+          .description-divide {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .img-overlay {
+              .img-description-short {
+                small {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+
+            .img-description-long {
+              padding: 1rem;
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        // Project section for multiple images
+        .project-section-multiple-photos-layed {
+          grid-template-columns: 1fr;
+
+          .section-contents {
+            grid-template-columns: 1fr;
+
+            .image-section {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

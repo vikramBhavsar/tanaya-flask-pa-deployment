@@ -1,0 +1,67 @@
+<div class="goToMainPage">
+  <a (click)="goToMain()">Go Back To Home</a>
+</div>
+
+<main>
+  <h2>Manage Your Projects here:</h2>
+  <div class="division">
+    <div class="project-list">
+      <ul>
+        <li *ngFor="let prj of projectModelList">
+          <a (click)="goToProjectManagment(prj.id)">{{ prj.projectName }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="create-project">
+      <form [formGroup]="projectCreateForm" (ngSubmit)="createProject()">
+        <label for="projectName">Project Heading</label>
+        <small><em>Project heading is always required</em></small>
+        <input type="text" id="projectName" formControlName="projectName" />
+
+        <label for="projectDescrip">What is the project about?</label>
+        <textarea
+          type="text"
+          id="projectDescrip"
+          rows="6"
+          formControlName="projectDescrip"
+        ></textarea>
+
+        <button type="submit" [disabled]="!projectCreateForm.valid">
+          Create Project
+        </button>
+      </form>
+
+      <div
+        class="prj-description-to-show"
+        [innerHTML]="
+          projectCreateForm.controls['projectDescrip'].value | markdown
+        "
+      ></div>
+    </div>
+  </div>
+
+  <hr>
+  <h2>Manage Your Blogs here:</h2>
+
+  <div class="division">
+    <div class="blog-list">
+      <ul>
+        <li *ngFor="let blog of blogList">
+          <a (click)="goToBlogMgmn(blog.id)">{{ blog.blogName }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="create-blog">
+        
+      <label for="blogName">Create new Blog Below</label>
+      <small><em>Blog Name is always required</em></small>
+      <input
+        type="text"
+        id="blogName"
+        name="blogName"
+        [formControl]="blogName"
+      />
+      <button (click)="createBlog()">Create Blog</button>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,270 @@
+<div class="container">
+  <div class="phone-menu">
+    <button (click)="TogglePhoneMenu()" class="phone-menu-btn">
+      <div *ngIf="hamburger; then barsBlock; else crossBlock"></div>
+      <ng-template #crossBlock><i class="fa-solid fa-bars"></i></ng-template>
+      <ng-template #barsBlock><i class="fa-solid fa-xmark"></i></ng-template>
+    </button>
+  </div>
+
+  <div class="phone-side-bar" #phone_side_menu>
+    <div class="side-bar-menu">
+      <ul>
+        <li>
+          <a routerLink="/home">Home</a>
+        </li>
+
+        <li>
+          <a routerLink="about" (click)="switchChild(true)">About</a>
+        </li>
+
+        <!-- Phone Menu for gallery -->
+        <li>
+          <div
+            *ngIf="
+              galleryActive;
+              then phoneGalleryBlock;
+              else phoneNonGalleryBlock
+            "
+          ></div>
+          <ng-template #phoneGalleryBlock>
+            <h3>Gallery</h3>
+
+            <ul *ngFor="let proj of projectList">
+              <li>
+                <a
+                  (click)="switchProject(proj.id, true)"
+                  [routerLink]="['gallery', proj.id]"
+                  [ngClass]="{ active: proj.id == curProject }"
+                  >{{ proj.projectName }}</a
+                >
+              </li>
+            </ul>
+          </ng-template>
+          <ng-template #phoneNonGalleryBlock>
+            <a [routerLink]="['/T/gallery', '-1']">Gallery</a>
+          </ng-template>
+        </li>
+
+
+        <!-- Phone Menu for art education -->
+        <li>
+          <div
+          *ngIf="
+            artEducationActive;
+            then phoneArtProjectBlock;
+            else phonenonArtProjectBlock
+          "
+        ></div>
+        <ng-template #phoneArtProjectBlock>
+          <h3>Art Education</h3>
+
+          <ul *ngFor="let artProj of artProjectList">
+            <li>
+              <a
+                (click)="switchArtProject(artProj.id,true)"
+                [routerLink]="['/T/art-education', artProj.id]"
+                [ngClass]="{ active: artProj.id == curArtproject }"
+                >{{ artProj.projectName }}</a
+              >
+            </li>
+          </ul>
+        </ng-template>
+        <ng-template #phonenonArtProjectBlock>
+          <a [routerLink]="['/T/art-education', '-1']"
+            >Art Education</a
+          >
+        </ng-template>
+        </li>
+
+        <li>
+          <div
+          *ngIf="
+            isBlogActive;
+            then phoneBlogProjectBlock;
+            else phoneNonBlogProjectBlock;
+          "
+        ></div>
+        <ng-template #phoneBlogProjectBlock>
+          <h3>Projects/Journal</h3>
+
+          <ul *ngFor="let blog of blogs">
+            <li>
+              <a
+                (click)="switchBlogProject(blog.id,true)"
+                [routerLink]="['/T/project-rants', blog.id]"
+                [ngClass]="{ active: blog.id == curBlog}"
+                >{{ blog.blogName }}</a
+              >
+            </li>
+          </ul>
+        </ng-template>
+        <ng-template #phoneNonBlogProjectBlock>
+          <a [routerLink]="['/T/project-rants', '-1']"
+            >Project's/Journal</a
+          >
+        </ng-template>
+        </li>
+
+        <li>
+          <a routerLink="contact" (click)="switchChild(true)">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divide-section">
+    <div class="side-bar">
+      <ul>
+        <li>
+          <div class="main-header">
+            <a routerLink="/home"
+              ><img src="assets/Images/tanaya_name.png" alt=""
+            /></a>
+            <!-- <a routerLink="/home">Tanaya</a> -->
+          </div>
+        </li>
+
+        <li *ngIf="access.length > 0">
+          <a routerLink="/projects-mngm">My Projects</a>
+        </li>
+
+        <!-- For Blog Management -->
+        <li *ngIf="access.length > 0">
+          <div
+          *ngIf="
+            isBlogMgmnActive;
+            then blogMgmnProjectBlock;
+            else nonBlogMgmnProjectBlock;
+          "
+        ></div>
+        <ng-template #blogMgmnProjectBlock>
+          <h3>Blog Management</h3>
+
+          <ul *ngFor="let blog of blogs">
+            <li>
+              <a
+                (click)="switchBlogMgnmProject(blog.id)"
+                [routerLink]="['/T/blog-mngm', blog.id]"
+                [ngClass]="{ active: blog.id == curBlogMgmn}"
+                >{{ blog.blogName }}</a
+              >
+            </li>
+          </ul>
+        </ng-template>
+        <ng-template #nonBlogMgmnProjectBlock>
+          <a [routerLink]="['/T/blog-mngm', '-1']"
+            >Blog Management</a
+          >
+        </ng-template>
+        </li>
+
+        <li>
+          <a routerLink="about">About</a>
+        </li>
+
+        <!-- For Gallery Project -->
+        <li>
+          <div
+            *ngIf="galleryActive; then galleryBlock; else nonGalleryBlock"
+          ></div>
+          <ng-template #galleryBlock>
+            <h3>Gallery</h3>
+
+            <ul *ngFor="let proj of projectList">
+              <li>
+                <a
+                  (click)="switchProject(proj.id)"
+                  [routerLink]="['gallery', proj.id]"
+                  [ngClass]="{ active: proj.id == curProject }"
+                  >{{ proj.projectName }}</a
+                >
+              </li>
+            </ul>
+          </ng-template>
+          <ng-template #nonGalleryBlock>
+            <a [routerLink]="['/T/gallery', '-1']">Gallery</a>
+          </ng-template>
+        </li>
+
+        <!-- For Art Project -->
+        <li>
+          <div
+            *ngIf="
+              artEducationActive;
+              then ArtProjectBlock;
+              else nonArtProjectBlock
+            "
+          ></div>
+          <ng-template #ArtProjectBlock>
+            <h3>Art Education</h3>
+
+            <ul *ngFor="let artProj of artProjectList">
+              <li>
+                <a
+                  (click)="switchArtProject(artProj.id)"
+                  [routerLink]="['/T/art-education', artProj.id]"
+                  [ngClass]="{ active: artProj.id == curArtproject }"
+                  >{{ artProj.projectName }}</a
+                >
+              </li>
+            </ul>
+          </ng-template>
+          <ng-template #nonArtProjectBlock>
+            <a [routerLink]="['/T/art-education', '-1']"
+              >Art Education</a
+            >
+          </ng-template>
+        </li>
+
+
+        <!-- SECTION USED FOR BLOGS -->
+        <li>
+          <div
+          *ngIf="
+            isBlogActive;
+            then blogProjectBlock;
+            else nonBlogProjectBlock;
+          "
+        ></div>
+        <ng-template #blogProjectBlock>
+          <h3>Projects/Journal</h3>
+
+          <ul *ngFor="let blog of blogs">
+            <li>
+              <a
+                (click)="switchBlogProject(blog.id)"
+                [routerLink]="['/T/project-rants', blog.id]"
+                [ngClass]="{ active: blog.id == curBlog}"
+                >{{ blog.blogName }}</a
+              >
+            </li>
+          </ul>
+        </ng-template>
+        <ng-template #nonBlogProjectBlock>
+          <a [routerLink]="['/T/project-rants', '-1']"
+            >Project's/Journal</a
+          >
+        </ng-template>
+        </li>
+
+        <li>
+          <a routerLink="contact">Contact</a>
+        </li>
+
+        <li *ngIf="access.length > 0">
+          <a (click)="logout()">Logout</a>
+        </li>
+
+        <li *ngIf="access.length <= 0">
+          <a (click)="goToLogin()">Login</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- here will contain all child components -->
+    <div class="main-app-child-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

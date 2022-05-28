@@ -1,0 +1,816 @@
+{
+  "PROJECTS": [
+    {
+      "projectID": "1",
+      "projectName": "Fragments",
+      "projectDescription": "",
+
+      "SECTIONS": [
+        {
+          "sectionID": "1",
+          "sectionType": "MG",
+          "sectionProjectID": "1",
+          "sectionHeader": "Fragment series",
+          "sectionDescription": "This series of paintings were made during the first lockdown in 2020. Restricted to stay indoors, these works marked the physical urge and immediate impulse to act on the leftover oil paint from my father’s palette, an act unlike any made by me in the past. (Or atleast I felt so in that moment) This paint was then translated as landscapes or in other words mindscapes on old and used pieces of canvas from my college days, a mundane material for any artist, found while doing household chores.           The paintings are intuitive fragments of memory, the self probably yearning for a utopian world, outside of Covid, its uncertainty and its reality. They symbolise hope, a sense of respite and relief in the mind’s eye. The works attempt at creating an aesthetic, a feeling of beauty from the purposeless, in order to create meaning and purpose.",
+
+          "IMAGES": [
+            {
+              "imgId": "1",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Fragments/Fragment_I.jpg",
+              "imgDescription": "Fragment I | Wasted oil paint on old, used canvas | 5.75 x 6.5 inches | 2020"
+            },
+            {
+              "imgId": "2",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Fragments/Fragment_II.JPG",
+              "imgDescription": "Fragment II | Wasted oil paint on old, used canvas | 4.5 x 7 inches | 2020"
+            },
+            {
+              "imgId": "3",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Fragments/Fragment_III.JPG",
+              "imgDescription": "Fragment III | Wasted oil paint on old, used canvas | 3 x 4 inches | 2020"
+            },
+            {
+              "imgId": "4",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Fragments/Fragment_IV.JPG",
+              "imgDescription": "Fragment IV | Wasted oil paint on old, used canvas | 2.2 x 4.8 inches | 2020"
+            },
+            {
+              "imgId": "5",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Fragments/Fragment_V.JPG",
+              "imgDescription": "Fragment V | Wasted oil paint on old, used canvas | 4.5 x 5.4 inches | 2020"
+            },
+            {
+              "imgId": "6",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Fragments/Fragment_VI.jpg",
+              "imgDescription": "Fragment VI | Wasted oil paint on old, used canvas | 4.2 x 6 inches | 2020"
+            },
+            {
+              "imgId": "7",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Fragments/Fragment_VII.JPG",
+              "imgDescription": "Fragment VII | Wasted oil paint on old, used canvas | 5 x 7 inches | 2020"
+            }
+          ]
+        },
+
+        {
+          "sectionID": "2",
+          "sectionType": "SD",
+          "sectionProjectID": "1",
+          "sectionHeader": "Accidental series",
+          "sectionDescription": "These two paintings: Accidental I and II, are quick works on paper which were intuitively made when I couldn’t create the painting that I actually wanted to: a painted piece of wall that broke off, from my own house. After several attempts at salvaging my painting, it seemed like the piece could not embody anything else, and preferred to remain as it is! Impulsively, I used the paint to create these sketches instead. The broken fragment is a part of the Memory Garden now. ",
+
+          "IMAGES": [
+            {
+              "imgId": "8",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Fragments/Acidental_Series.JPG",
+              "imgDescription": "Accidental I & Accidental II | Leftover oil paint on scrap paper | 3.9 x 9.4 inches | 2021"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "2",
+      "projectName": "Thought Diaries",
+      "projectDescription": "Thought Diaries is a series of works which were created post Lockdown 1.0. As disparate works, they are an amalgamation of floating thoughts in the moment, combined with an attempt to understand transitory feelings. My own personal experiences along with objects that I observed in my daily routine have been translated as paintings and sketches/ drawings.",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "3W",
+          "sectionProjectID": "2",
+          "sectionHeader": "Match the Following series",
+          "sectionDescription": "Match the Following was a common exercise given to us in school, usually as instructions to match the correct words with visuals. This series is a take on this routine exercise, attempting to comprehend simple (yet complex) feelings through visual connotations. While emotions are broadly categorised, there are a range of transitory feelings that we are not able to understand psychologically. Like an observer of an onion, the gestures of a hand and natural terrains, I have tried to uncover and simultaneously depict the layers of gray within our transitory feelings, yet unable to fully match the word with the visual!",
+
+          "IMAGES": [
+            {
+              "imgId": "9",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Thought_Diaries/match_the_Following_I.JPG",
+              "imgDescription": "Match the Following I | Ink on torn paper | Variable | 2020 | Match the following: strength, vulnerability, mental breakdown, despair, sensitivity"
+            },
+            {
+              "imgId": "10",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Thought_Diaries/match_the_Following_II.JPG",
+              "imgDescription": "Match the Following II | Discarded lipstick on old sketches | Variable | 2021 | Match the following: angst, composure, irritability, contentment, void"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Thought_Diaries/match_the_Following_III.JPG",
+              "imgDescription": "Match the Following III | Digital photographs | Variable | 2021 | Temper, anticipation, pondering, apprehension, exhaustion"
+            }
+          ]
+        },
+        {
+          "sectionID": "4",
+          "sectionType": "SD",
+          "sectionProjectID": "2",
+          "sectionHeader": "The Sponge",
+          "sectionDescription": "While I cleaned my faux suede shoes with the shoe cleaner, I realised it was just a sponge - A sponge that removed the dust by retaining it within itself. It toiled and tore, only to live a false life, concealed mostly within its lid. It was too shameful, after all, to wear that dust with pride. And, so it chose to wear off instead..",
+
+          "IMAGES": [
+            {
+              "imgId": "9",
+              "imgLink": "assets/Images/Thought_Diaries/IMG_1756.jpg",
+              "imgDescription": "The Sponge | Graphite on torn paper | 2020"
+            }
+          ]
+        },
+        {
+          "sectionID": "5",
+          "sectionType": "SD",
+          "sectionProjectID": "2",
+          "sectionHeader": "Crumpled",
+          "sectionDescription": "I don't know whether it's my body or my mind that feels twisted. A crumpled piece of paper spoke to me.",
+
+          "IMAGES": [
+            {
+              "imgId": "9",
+              "imgLink": "assets/Images/Thought_Diaries/Crumpled.jpg",
+              "imgDescription": "Crumpled | Graphite on torn paper | 2020"
+            }
+          ]
+        },
+        {
+          "sectionID": "5",
+          "sectionType": "MG",
+          "sectionProjectID": "2",
+          "sectionHeader": "Instantaneous",
+          "sectionDescription": "",
+
+          "IMAGES": [
+            {
+              "imgId": "9",
+              "imgLink": "assets/Images/Thought_Diaries/The_Aquarium.JPG",
+              "imgDescription": "The Aquarium | Acrylic on discarded board | 2020"
+            },
+            {
+              "imgId": "10",
+              "imgLink": "assets/Images/Thought_Diaries/Trying_to_remember_that_utopian green.JPG",
+              "imgDescription": "Trying to Remember that Utopian Green | Acrylic on discarded board | 2020"
+            },
+            {
+              "imgId": "10",
+              "imgLink": "assets/Images/Thought_Diaries/Relax_your_mind_said_the_mother_from_the_meditation_music.JPG",
+              "imgDescription": "'Relax your Mind', said the Mother from the Meditation Music | Acrylic on used canvas board | 2020"
+            }
+          ]
+        },
+        {
+          "sectionID": "6",
+          "sectionType": "S",
+          "sectionProjectID": "2",
+          "sectionHeader": "And she responded, 'No, I'm not married!'",
+          "sectionDescription": "",
+
+          "IMAGES": [
+            {
+              "imgId": "9",
+              "imgLink": "assets/Images/Thought_Diaries/And_she_responded,__No,_I_m_not_married!_.JPG",
+              "imgDescription": "And she responded, 'No, I'm not married!' | Graphite on torn paper | Variable | 2021"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "4",
+      "projectName": "Jal aur Agni",
+      "projectDescription": "",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "2W",
+          "sectionProjectID": "3",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Jal_aur_Agni/Agni.jpg",
+              "imgDescription": "*Agni* | Acrylic on wood | 5 x 9.5 inches | 2018"
+            },
+            {
+              "imgId": "12",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Jal_aur_Agni/Jal.jpg",
+              "imgDescription": "*Jal* | Acrylic on wood | 5 x 9.5 inches | 2018"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Mend",
+      "projectDescription": "To mend would be to bring back to use, even if marks or scars remain: visible or not visible. This act of mending is a mere attempt at putting back a broken piece of cup to the place where it originally belonged; just like a jigsaw puzzle. The rest of the pieces of the cup are lost, left isolated, and the cup remains broken mostly. To use a cup is to drink in it, is to make it contain something. The cracks of the cup, however, make its state of disuse apparent. Is the cup reduced or elevated to an art object? <br> The cup is now part of the Memory Garden.",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "S",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Mend/Mend.JPG",
+              "imgDescription": " *Mend* | Broken cup mended with paper pulp and natural glue | 2019"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Utopia",
+      "projectDescription": "Utopia is a work very personal to me. It was inspired by a photograph taken at the Cubbon Park, Bengaluru. It captures an exact moment, when I felt absolutely ecstatic looking at this particular scene (as in the painting) and exclaimed to my friend, with whom I was visiting, ‘Utopia!’ I translated the shades of green, specifically the bright lemon green, which I fell in love with for the first time, onto a discarded board on which I had previously experimented with. The painting embodies this particular memory along with the many other memories of my visits to Lal Bagh with my mother, as a child. <br> The painting was gifted to a friend. ",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "S",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Utopia/Utopia.JPG",
+              "imgDescription": "*Utopia* | Oil on discarded board | 8 x 10 inches | 2018"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Memorabilia",
+      "projectDescription": "Memorabilia contains the little objects and materials that I used to enjoy collecting as a child. The cement pieces capture the associated memories in my mind, while the discarded bits of paper portray the images of my faint memory. The work created was a way through which I could date back my obsessions that I currently have: collecting discards and finding possibilities of using them through my art. <br> The drawings/ paintings on paper have been composted and the cement pieces are now a part of the Memory Garden.",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/memorabilia/1.jpg",
+              "imgDescription": "*Memorabilia* | Found objects (locks, keys, pistachio shells, groundnut shells, bubble wrap, sea shells, cement) and mixed media on discarded paper | 25 x 26.5 inches | 2017 "
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/memorabilia/3.jpg",
+              "imgDescription": "Detail View"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/memorabilia/4.jpg",
+              "imgDescription": "Detail View"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/memorabilia/5.jpg",
+              "imgDescription": "Detail View"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Recipe",
+      "projectDescription": "I began collecting leftover food from the plates of my classmates in discarded plastic glasses in the dining hall at my university campus during MFA. Simultaneously, a few exchanges with my classmates were jotted down, somehow ‘evidences of my projected guilt’ (probably felt by most as a cultural value one is brought up with in an Indian household). The leftover food was composted in ‘Matkas’, turning this guilt into matter. <br> The exchanges were playful, most of my classmates being aware of my habit of not wanting to waste food. A few of them were: ‘Main apne paapo ka pashchataap kar raha hoon’ (I am undergoing penance for my sins) ‘Idhar ka khana acha nahi hai, isliye zyaada phikta hai’ (The food here is not good and so it gets wasted more) ‘Nimbu, achaar aur hari mirch sabse taken for granted hote hain. Sabse zyaada yehi phikte hain’ (Lemon, pickle and green chillies are most taken for granted and therefore wasted) <br> The works are symbolic of value and the constant intermingling of permanence and impermanence. <br> 15 of 30 works exist. The remaining are now part of the project: Burial.",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_5247E.jpg",
+              "imgDescription": "*Recipe* | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_5250_croppppp.jpg",
+              "imgDescription": "*Recipe* | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_5253 cropp.jpg",
+              "imgDescription": "*Recipe* | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_5260.JPG",
+              "imgDescription": "*Recipe* | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_7546.jpg",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_7748.jpg",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_7751.jpg",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_7754.jpg",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_7757.jpg",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_E7532.jpg",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_E7536.JPG",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_E7537.JPG",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Recipe/IMG_E7539.JPG",
+              "imgDescription": "*Recipe* (detail view) | Clay and graphite on handmade recycled paper, impression of wasted food on handmade recycled paper, exchange with classmate | 5 x 8 Inches each | 2019"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Tehelka Series",
+      "projectDescription": "I started using discarded and found materials such as tissue paper, used plastic glasses, foil, left over paint, newspaper, found shells, etc. as metaphors. They translate into a play of form, colour and texture in this series. Having taken printmaking as a subsidiary subject during my BFA, I observed that a lot of PVC ink was wasted during the time. <br> It was the first time where I began treating the ink (or paint) as a *material* and not a *medium*. In addition, the materials began to physically manifest on my works, instead of them being mere tools to create impressions/ textures. The surficial tensions and layers were built through the act of rolling, squeezing, dabbing, pouring, dripping etc (like in the former series: Haze), where in I let the various wasted materials in the studio speak to me. The works symbolize various states of being or in other words existence through different kinds of movements and tensions. ",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Tehelka_series/Artless.jpg",
+              "imgDescription": " *Artless* | Newspaper and used foil on ply board |29.75 x 22.75 inches (with frame) | 2017"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Tehelka_series/Harmony_and_Discord.jpg",
+              "imgDescription": " *Harmony and Discord* | Acrylic, wasted PVC ink, leftover tissue roll on canvas | 60” x 60” | 2016"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Tehelka_series/Tehelka.jpg",
+              "imgDescription": " *Tehelka* | Acrylic, wasted PVC ink, leftover tissue roll on canvas | 48” x 48” | 2016"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Tehelka_series/Paintball.jpg",
+              "imgDescription": " *Camouflage* | Acrylic, wasted PVC ink, leftover tissue roll and newspaper on canvas | 29 x 23 inches (with frame) | 2017"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Blur Series",
+      "projectDescription": "These works arose from the need to use worn out tools, which I found in my studio during BFA: a roller that had lost its elasticity to spread paint and a squeegee that had a damaged rubber surface. The act of rolling, squeezing, dabbing, pouring and dripping became significant to me, as they implied that I was doing *something*: the expressionist tendency towards which I leaned, was new to me at the time. <br> The works served as instant intuitive urges, while I worked on multiple canvases at once. Even though I did not have an end image in mind, I observed that subconsciously, the works often resembled *nature*, at the point where I decided to stop painting further. It was probably a way through which I could escape my conscious mind, simultaneously have the satisfaction of *doing something* and attempt to find meaning through the process (atleast try to!).  ",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Blur_Series/Blur.jpg",
+              "imgDescription": "*Blur* | Acrylic on canvas | 36 x 48 inches |2016"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Blur_Series/Blurry.jpg",
+              "imgDescription": "*Blurry* | Acrylic on canvas | 24 x 30|2016"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Blur_Series/Fade.jpg",
+              "imgDescription": "*Fade* | Oil on canvas | 30 x 24 inches | 2016"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Blur_Series/Haze.jpg",
+              "imgDescription": "*Haze* | Acrylic on canvas | 20 x 20 inches | 2016"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Blur_Series/Misty.jpg",
+              "imgDescription": "*Misty* | Acrylic on canvas | 24 x 24 inches | 2016"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Blur_Series/Reflect_Reflected.jpg",
+              "imgDescription": "*Reflect, Reflected* | Acrylic on canvas | 24 x 24 inches | 2016"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Blur_Series/The_Room.jpg",
+              "imgDescription": "*The Room* | Acrylic on canvas | 24 x 24 inches | 2016"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Scatter",
+      "projectDescription": "",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Scatter/1.jpg",
+              "imgDescription": "As on 13th July, 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Scatter/2.jpg",
+              "imgDescription": "As on 20th March, 2020.jpg"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Scatter/3.jpg",
+              "imgDescription": "As on 31st March, 2022.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Re-Weave",
+      "projectDescription": "A mundane sofa brought by my paternal grandmother from her native place in the 1950s, became a point of inquiry as I witnessed its repair when the woven strings began to break, loosen and wear out. The work became a response to the above process as I began to question the interwoven aspects of time, loss, remembering and materiality <br> The installation at Serendipity Arts Festival which was dismantled, culminated into this work. The work is the result of a haphazard act of re-weaving paper strips (used during the installation) with words in Hindi: Galna, Gal jaana and Gal Diya Jaana, after I began observing the sofa *carcass* (As I like to call it). <br> Nothing of the installation at the festival remains apart from the sofa carcass and this work which I brought back home. ",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Re_Weave/Artwork.jpg",
+              "imgDescription": "*Re-Weave* | Clay on found paper strips and natural glue | 16.2 x 16.6 inches | 2020"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Re_Weave/Detail.jpg",
+              "imgDescription": "Detail View"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Re_Weave/Detail_II.jpg",
+              "imgDescription": "Detail View"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Scratch",
+      "projectDescription": "*The anxiety of having to leave so much behind...* <br> Engrossed with the act of removing tiny fragments of dried pulp stuck on the mesh that I was using to create recycled paper, it seemed as though the dried pulp was mimicking dust particles and cobwebs. Like a window in an abandoned space overlooking outside, the task of removing every fragment from the mesh seemed impossible. But I couldn’t stop! The act of continuous scratching seemed futile, for so many layers still remained stuck on the mesh. The act, almost obsessive like scratching one’s skin; difficult to stop, once the process starts, constantly revealed an intermingling of comfort and discomfort. <br> While I continued to *scratch*, I realised that this act was characterized by the desire to use those miniscule fragments and hence removing them from their state of disuse. A possible way to repurpose them would be to use them as pulp, but to what extent would this loop continue? Was it possible for no particle to remain on the mesh?",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "",
+          "sectionDescription": "",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "y",
+              "imgLink": "https://www.youtube.com/embed/Y4FUXsW5dpg",
+              "imgDescription": "*Scratch* | video on loop | 2018"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "The Forbidden Fruit",
+      "projectDescription": "",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "Temporal I",
+          "sectionDescription": "*The thing while dead had a vitality of its own...* <br> Change through the passage of time marks the gradual process of oxidation of the apple core. While change is only understood through time, moments (of time) in the gradual process of rotting seem to come to a standstill. This time-lapse of the decay process of my own eaten apple captures the transition of decay over a period of 2 1/2 months. It is a result of my curiosity after observing a number of half-eaten apple cores in the university campus. When something decays, the process is a slow transformation of a certain kind of shrinkage, with an eventual probability of leading to *nothing*. As I realised that life and death co-existed hand in hand, the uneaten core seemed like a metaphor for a skeleton/carcass. Through this work, I wished to push myself to document these slow transitions to this possible end. However, I couldn’t continue this work beyond this point as the rotten apple core went missing.",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "y",
+              "imgLink": "https://www.youtube.com/embed/uujfRr8BxhA",
+              "imgDescription": "*Temporal I* | Single channel video | 7 minutes 29 seconds | 2018"
+            }
+          ]
+        },
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "Corporeal Immortality",
+          "sectionDescription": "The mundane activity of eating an apple, made me conscious of the process, ultimately leaving the uneaten ‘core’. The process of ageing of one’s body through the passage of time seems to maintain a lead over the realisation of one’s own temporary corporeality. From a psychological perspective, we live in such a way as though always seeking to master death. The light peeping through the holes on the handmade paper make the fragile state of our corporeality evident",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/The_Forbidden_Fruit/corporeal_immortaility.jpg",
+              "imgDescription": "*Corporeal Immortality* | Piercing on handmade recycled paper visible through light | 5 x 8 inches | 2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/The_Forbidden_Fruit/IMG_7327 editt.jpg",
+              "imgDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projectID": "5",
+      "projectName": "Na Rakhna Hai, Na Phenkna Hai",
+      "projectDescription": "In a state of disuse over a long period of time, I witnessed my maternal grandmother’s utensils lying wasted in her kitchen cupboards. (The age of the utensils ranging from approximately 70-150 years) Their old world charm instantly stood out, as she casually started telling me about their personal significance, use and stories. *Na Rakhna Hai, Na Phenkna Hai* is a remark that Nani made while I conversed with her, which immediately caught my attention and appropriate for the title of this ongoing project. Over a period of time, my position from being solely fascinated with the utensils shifted to them being treated as 'heirlooms', containers of memorabilia and their value surpassing any form of tangibility. ",
+      "SECTIONS": [
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "Ash",
+          "sectionDescription": "A hole present in an oil container discovered by the ‘Kalaiwala’ marked its obsolescence. On serving a meal to my batchmates and juniors after the Kalayi process, (marking their Rebirth) the obsolescence of the container was used by way of collecting the remnants of the cooking process. The container of ‘ash’ perceived as brittle and an embodiment of nothingness, on the contrary proved to nurture life",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/1.jpg",
+              "imgDescription": "*Ash* | Clay and graphite on handmade recycled paper and oil container | Variable |2019 | Documentation from Corpus, Image and Inextricability, Art Konsult"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/2.JPG",
+              "imgDescription": "*Ash* | Clay and graphite on handmade recycled paper and oil container | Variable |2019 | Documentation from Corpus, Image and Inextricability, Art Konsult"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/3.jpg",
+              "imgDescription": "Detail View"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/4.jpg",
+              "imgDescription": "Detail View"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/5.jpg",
+              "imgDescription": "Detail View"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/6.jpg",
+              "imgDescription": "Detail View"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/7.JPG",
+              "imgDescription": "*Ash* | Clay and graphite on handmade recycled paper and oil container | Variable |2019 | Documentation from Corpus, Image and Inextricability, Art Konsult"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/8.jpg",
+              "imgDescription": "Installation View"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Ash/9.jpg",
+              "imgDescription": "Installation View"
+            }
+          ]
+        },
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "Imprints",
+          "sectionDescription": "Like fragments of memory subject to change, the dents, scratches, paint marks, imprints, cracks etc. on the utensils mark their experience, having a temporality of their own. As reminders of their past obsolescence as well as use, these fragments mark a new beginning as well as end. <br> The process of ‘Kalayi’ (An ancient Indian craft of coating brass utensils with tin and heated ammonium chloride in order to prevent oxidation that would mix with food and hence dangerous for consumption) was important to bring them back to use.",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_5146.JPG",
+              "imgDescription": "*Imprint* | UV digital print on handmade recycled paper (12 works) | Variable (5 x 8 inches approx) |   2019"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7781.jpg",
+              "imgDescription": "1 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7759.jpg",
+              "imgDescription": "2 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7761.jpg",
+              "imgDescription": "3 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7766.jpg",
+              "imgDescription": "4 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7767.jpg",
+              "imgDescription": "5 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7768.jpg",
+              "imgDescription": "6 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7772.jpg",
+              "imgDescription": "7 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7773.jpg",
+              "imgDescription": "8 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7774.jpg",
+              "imgDescription": "9 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7778.jpg",
+              "imgDescription": "10 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7779.jpg",
+              "imgDescription": "11 of 12"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Imprints/IMG_7780.jpg",
+              "imgDescription": "12 of 12"
+            }
+          ]
+        },
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "Still life",
+          "sectionDescription": "The handmade recycled paper casts of the utensils seem like a ‘time lapse’ symbolising their eventual fragile state or ultimate decay. Simultaneously, the photograph marks the apparent disuse of the utensils.",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Still_Life_I.JPG",
+              "imgDescription": "*Still Life I* | Photograph as part of digital archive | 30 x 36 inches | 2018"
+            },
+            {
+              "imgId": "11",
+              "isVideo": "n",
+              "imgLink": "assets/Images/Na_Rakhna_Hai_ Na_Phenkna_Hai/Still_Life_II.CR2",
+              "imgDescription": "*Still Life II* | Photograph as part of digital archive | 30 x 36 inches | 2018"
+            }
+          ]
+        },
+        {
+          "sectionID": "3",
+          "sectionType": "MG",
+          "sectionProjectID": "5",
+          "sectionHeader": "Rebirth",
+          "sectionDescription": "Rebirth traces the journey of the utensils from being close to their end to their eventual *rebirth* (through the process of Kalayi). Even after being reborn again, the utensils fall back into the same loop of experiencing life once again, the coating as a result of Kalayi starting to wear off. The remnants of the food on the utensils are perceived as flesh that begins to rot upon death, however simultaneously marking a *life*",
+          "IMAGES": [
+            {
+              "imgId": "11",
+              "isVideo": "y",
+              "imgLink": "https://www.youtube.com/embed/HVezbeP05_U",
+              "imgDescription": "Rebirth | Double channel video | 9 minutes 32 seconds | 2018 - 2019"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

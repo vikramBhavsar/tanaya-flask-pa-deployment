@@ -1,0 +1,141 @@
+
+<div class="goToMainPage">
+    <a (click)="goToMain()">Go Back To Home</a>
+</div>
+
+
+<main>
+    <div class="navbar">
+
+    </div>
+
+    <div class="projectDeleteModal" #projectDelModal>
+        <div class="contents">
+            <p>Are you sure you want to delete this Project?</p>
+
+            <div class="button-group">
+                <button (click)="cancelDelete()" class="cancelBtn">Cancel</button>
+                <button (click)="confirmDelete()" class="deleteBtn">Confirm Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="projectDeleteModal" #mediaDeleteModal>
+        <div class="contents">
+            <p>Are you sure you want to delete this Media?</p>
+
+            <div class="button-group">
+                <button (click)="cancelMediaDelete()" class="cancelBtn">Cancel</button>
+                <button (click)="confirmMediaDelete()" class="deleteBtn">Confirm Delete</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="back-to-projects">
+        <a (click)="routeToProjects()">Go Back to Projects</a>
+    </div>
+
+
+    <div class="main-divide">
+        <div class="media-management">
+            <h3>Upload Contents Here</h3>
+    
+            <form [formGroup]="mediaCreateForm" (ngSubmit)="createMedia()">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="isVideo" (click)="updateVideoCheckbox()" name="isVideo" formControlName="isVideo">
+                    <label for="isVideo">  Is it a video?</label><br>
+                </div>
+
+                <label for="sectionID"></label>
+                <small><em>Selecting Section is mandatory</em></small>
+                <select name="sectionID" id="sectionID" formControlName="sectionID">
+                    <option value="" disabled selected hidden>Select Section</option>
+                    <option [value]="section.id" *ngFor="let section of projectDetails?.sections">{{section.sectionName}}</option>
+                  </select>
+    
+                <label for="mediaDescription">Enter Media Description</label>
+                <input type="text" id="mediaDescription" formControlName="mediaDescription">
+                
+                <label for="mediaFile" class="filePicker" *ngIf="mediaCreateForm.controls['isVideo'].value != true">Select a file:
+                    <input type="file" id="mediaFile" name="mediaFile" (change)="fileUploadInitiated($event)" *ngIf="mediaCreateForm.controls['isVideo'].value != true" accept="image/jpg, image/jpeg">   
+                </label>
+    
+                <label for="videoUrl" *ngIf="mediaCreateForm.controls['isVideo'].value == true">Video URL:</label>
+                <input type="text" id="videoUrl" formControlName="videoUrl" *ngIf="mediaCreateForm.controls['isVideo'].value == true">
+                
+
+                <button type="submit" Value="Upload Content" [disabled]="!mediaCreateForm.valid">Upload Media</button>
+
+                <div class="current-file-show" *ngIf="imgFile">
+                        <p>Current File Selected: </p>
+                        <p>{{imgFile.name}}</p>
+                </div>
+            </form> 
+        </div>
+    
+        <div class="create-section">
+    
+            <h3>Create a new Section</h3>
+            <div class="form-contents">
+    
+                <form [formGroup]="sectionCreateForm" (ngSubmit)="createSection()">
+                    <label for="sectionName">Section Heading</label>
+                    <small><em>Section heading is always required</em></small>
+                    <input type="text" id="sectionName" formControlName="sectionName">
+    
+                    <label for="sectionDescription">What is the Section about?</label>
+                    <textarea type="text" id="sectionDescription" rows="6" formControlName="sectionDescription"></textarea>
+
+
+                    <button type="submit" [disabled]="!sectionCreateForm.valid">Create Section</button>
+                </form>
+    
+            </div>
+        </div>
+    </div>
+
+    <h3>Manage Your Sections Below</h3>
+
+    <hr>
+
+    <div class="management-divide">
+
+
+        <div class="management-page"  *ngFor="let section of projectDetails?.sections">
+
+            <div class="grid-divide">
+                <div class="section-page">
+                    <a (click)="goToSectionUpdateDelete(section.id)">{{section.sectionName}}</a>
+                </div>
+    
+    
+                <div class="section-media-page">
+                    <ul>
+                        <li *ngFor="let mediaCon of section.mediaContent">
+                            <div class="media-box">
+                                <div class="description">
+                                    <p>{{mediaCon.mediaDescription}}</p>
+                                    <hr>
+                                    <i (click)="deleteMedia(mediaCon.id)" class="fa-solid fa-eraser"><p>Delete</p></i>
+                                </div>
+                                <img [src]="mediaCon.mediaFile" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            
+            </div>
+            <hr>
+
+        </div>
+
+    </div>
+
+    <div class="project-deletion">
+        <p>Delete Your Project Here:</p>
+        <button (click)="deleteProject()">Delete Project</button>
+    </div>
+
+
+</main>

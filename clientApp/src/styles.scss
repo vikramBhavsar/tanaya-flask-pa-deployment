@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+$primary-color: #F8EFE6;
+$primary-dark: #333;
+$secondary-color: #fec5bb;
+$secondary-blue: #2a9d8f;
+$secondary-red: #e63946;
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+    background-color: $primary-color;
+
+
+    // uncomment below font family for cursive
+    // font-family: 'Dancing Script', cursive;
+
+    // default font
+    font-family: 'Oswald', sans-serif;
+}

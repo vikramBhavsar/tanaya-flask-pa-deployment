@@ -1,0 +1,65 @@
+<main>
+  <div class="blog-container">
+
+      <!-- Image Modal to view enlarged Image. -->
+  <div class="opened-img" #imgModal>
+    <div class="btn-div">
+      <button (click)="closeModalImage()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="img-container">
+      <img src="{{ curImgLink }}"  alt="" />
+      <p>{{ curImgStatus }}</p>
+      <!-- <p [innerHTML]="curImgStatus | markdown"></p> -->
+    </div>
+  </div>
+
+
+    <h2>
+      {{ blogProject.blogName }}
+    </h2>
+
+    <div class="blog-sections" *ngFor="let bSec of blogProject.blog_sections">
+      <!-- Different display for section type -->
+      <div class="section-switch" [ngSwitch]="bSec.sectionType">
+        <div
+          class="text-section"
+          *ngSwitchCase="'T'"
+          [innerHTML]="bSec.sectionText | markdown"
+        ></div>
+
+        <div class="media-section" *ngSwitchCase="'I'">
+          <div class="image-container">
+            <img [src]="bSec.mediaURL" (click)="openImage(bSec.mediaURL!.toString(),bSec.mediaDes)"  alt="" />
+            <small [innerText]="bSec.mediaDes"></small>
+          </div>
+        </div>
+
+        <div class="media-section" *ngSwitchCase="'V'">
+          <div class="iframe-container">
+            <iframe
+              [src]="bSec.videoURL | safeUrl: 'resourceUrl'"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <small [innerText]="bSec.mediaDes"></small>
+          </div>
+        </div>
+
+        <div class="media-group-section" *ngSwitchCase="'MI'">
+          <div class="image-group">
+            <div
+              class="image-item"
+              *ngFor="let mediaChild of bSec.media_group_section"
+            >
+              <img [src]="mediaChild.mediaURL" (click)="openImage(mediaChild.mediaURL,mediaChild.mediaDes)" alt="" />
+              <small [innerText]="mediaChild.mediaDes"></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
