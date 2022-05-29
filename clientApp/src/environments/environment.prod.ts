@@ -1,5 +1,4 @@
 export const environment = {
   production: true,
-  baseServerURL: 'https://tanayarraj.pythonanywhere.com/api/',
-
+  baseServerURL: 'https://rrajtanaya.pythonanywhere.com/api/',
 };
