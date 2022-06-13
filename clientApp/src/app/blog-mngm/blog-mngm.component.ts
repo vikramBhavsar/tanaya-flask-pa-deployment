@@ -119,7 +119,7 @@ export class BlogMngmComponent implements OnInit {
         id: '',
         sectionType: sectionType,
         sectionText: this.newSectionText.value,
-        mediaURL: new File([],''),
+        mediaURL: undefined,
         mediaDes: '',
         videoURL: '',
         blogID: this.currentBlog.id,
@@ -202,7 +202,7 @@ export class BlogMngmComponent implements OnInit {
             // Resetting the old values.
             that.isVideo = false;
             that.controlbooleans[3] = false;
-            that.imgFile = new File([],'');
+            that.imgFile = undefined;
             that.mediaDescription.setValue('');
           },
           error(msg) {
