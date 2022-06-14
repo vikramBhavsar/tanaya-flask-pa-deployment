@@ -56,12 +56,12 @@ $secondary-color: #fec5bb;
       height: 100%;
       background: transparent;
       position: relative;
-      padding: 1rem;
+      // padding: 1rem;
       box-sizing: border-box;
 
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
 
       & > * {
@@ -69,7 +69,7 @@ $secondary-color: #fec5bb;
       }
 
       img {
-        padding-top: 1rem;
+        padding-top: 2rem;
         background: transparent;
         width: 95%;
         max-height: 80%;
