@@ -1,11 +1,11 @@
 <div class="container">
     <!-- Image Modal to view enlarged Image. -->
-    <div class="opened-img" #imgModal>
-      <div class="btn-div">
+    <div class="opened-img" #imgModal (click)="closeModalImage()">
+      <!-- <div class="btn-div">
         <button (click)="closeModalImage()">
           <i class="fa-solid fa-xmark"></i>
         </button>
-      </div>
+      </div> -->
   
       <div class="img-container">
         <img src="{{ curImgLink }}" alt="" />

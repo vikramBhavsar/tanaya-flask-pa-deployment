@@ -77,8 +77,8 @@ main {
         img {
           padding-top: 1rem;
           background: transparent;
-          width: 90%;
-          height: 90%;
+          width: 95%;
+          max-height: 80%;
           object-fit: contain;
           z-index: 12;
         }
