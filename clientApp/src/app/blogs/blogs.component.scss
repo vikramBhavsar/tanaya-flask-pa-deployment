@@ -7,7 +7,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95%;
+  justify-content: center;
+  width: 100%;
   height: 100%;
 
   img {
@@ -119,6 +120,7 @@ main {
       grid-template-columns: 1fr;
 
       .text-section {
+        margin-top: 2rem;
         margin-bottom: 1rem;
         font-size: 2rem;
         text-align: justify;
@@ -126,7 +128,7 @@ main {
 
       .media-section {
         margin-bottom: 1rem;
-
+        margin-top: 2rem;
         .image-container {
           display: flex;
           flex-direction: column;
@@ -177,18 +179,21 @@ main {
 
       .media-group-section {
         width: 100%;
-
+        margin-top: 2rem;
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
         .image-group {
           display: grid;
           grid-template-columns: 1fr 1fr;
+          
+          gap: 5px;
 
           img {
-            object-fit: cover;
+            object-fit: contain;
             width: 100%;
             height: 100%;
           }
@@ -230,7 +235,7 @@ main {
     .blog-container {
       .blog-sections {
         .media-group-section {
-          width: 90%;
+          width: 100%;
           .image-group {
             display: grid;
             grid-template-columns: 1fr;
