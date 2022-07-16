@@ -21,7 +21,7 @@ ul {
 
 main {
   position: relative;
-  background-image: url("/static/assets/Images/bg_1.png");
+  background-image: url("/assets/Images/bg_1.png");
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -42,7 +42,7 @@ main {
 
     img {
       width: 50rem;
-      transition: width 0.8s, transform 0.8s;
+      transition: width 2s, transform 2s;
       background: transparent;
       z-index: 5;
     }
@@ -193,7 +193,7 @@ main {
 @media only screen and (max-width: 479px) {
     main {
         position: relative;
-        background-image: url("/static/assets/Images/bg_3.png");
+        background-image: url("/assets/Images/bg_3.png");
         background-size: cover;
         width: 100vw;
         height: 100vh;
@@ -213,7 +213,7 @@ main {
       
           img {
             width: 20rem;
-            transition: width 0.8s, transform 0.8s, opacity 0.8s;
+            transition: width 0.8s, transform 2s, opacity 2s;
             background: transparent;
             z-index: 5;
           }

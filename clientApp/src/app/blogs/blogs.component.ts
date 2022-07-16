@@ -2,6 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GalleryProjectIDService } from '../services/gallery-project-id.service';
 import { BlogService } from '../services/blog.service';
 import { BlogDetails } from '../models/blog';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blogs',
@@ -11,6 +13,7 @@ import { BlogDetails } from '../models/blog';
 export class BlogsComponent implements OnInit {
   constructor(
     private ProjectIDService: GalleryProjectIDService,
+    private route: ActivatedRoute,
     private blogService: BlogService
   ) {}
 
@@ -25,6 +28,10 @@ export class BlogsComponent implements OnInit {
   curImgLink: string = '';
   curImgStatus: string = 'some wonderful text';
 
+
+  //private routerSubscription
+  private routeSub!: Subscription;
+
   blogProject: BlogDetails = {
     id: '0',
     blogName: '',
@@ -36,8 +43,19 @@ export class BlogsComponent implements OnInit {
     // Setting the service for BLOG ID subscription
     this.ProjectIDService.getBlogMessage().subscribe((msg) => {
       this.curBlog = msg;
-      this.initializerBlogData();
+      // this.initializerBlogData();
     });
+
+
+
+    // this is additional text to get the ID directly from link
+    this.routeSub= this.route.params.subscribe(params => {
+      // alert(`This is from inside gallery: ${params["projectid"]}`)
+      this.curBlog = params["blogID"];
+      this.initializerBlogData();
+    })
+
+    
   }
 
   initializerBlogData() {

@@ -1,4 +1,7 @@
-<div class="container">
+<div *ngIf="curArtProject != '-1'; then correctProject else backgroundImage"></div>
+
+<ng-template #correctProject>
+  <div class="container">
     <!-- Image Modal to view enlarged Image. -->
     <div class="opened-img" #imgModal (click)="closeModalImage()">
       <!-- <div class="btn-div">
@@ -74,3 +77,13 @@
     </div>
   </div>
   
+</ng-template>
+
+
+<ng-template #backgroundImage>
+  <div class="gif-container">
+    <img src="assets/Images/loading.gif" alt="">
+  </div>
+</ng-template>
+
+

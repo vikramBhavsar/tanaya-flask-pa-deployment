@@ -33,6 +33,8 @@ export class MainAppComponent implements OnInit {
   // **** Variables for Blog Management
   curBlogMgmn: string = '';
 
+  // 
+
   projectList: ProjectModel[] = [
     {
       id: '-1',
