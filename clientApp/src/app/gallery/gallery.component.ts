@@ -38,9 +38,13 @@ export class GalleryComponent implements OnInit {
   // **** VARIABLES FOR PROJECT SELECTION SECTION WISE **** //
   curProject: string = '';
 
+
+  //private routerSubscription
+  private routeSub!: Subscription;
+
   projectGLRY :ProjectGLRY = {
     "id": "-1",
-    "projectName": "Fragments",
+    "projectName": "",
     "projectDescription": "",
     "sections":[],
   }
@@ -53,9 +57,18 @@ export class GalleryComponent implements OnInit {
 
     // Setting the service for project ID subscription
     this.ProjectIDService.getMessage().subscribe(msg =>{
-      this.curProject = msg;
+      // this.curProject = msg;
+      // this.initializerGalleryData();
+    })
+
+    // this is additional text to get the ID directly from link
+    this.routeSub= this.route.params.subscribe(params => {
+      // alert(`This is from inside gallery: ${params["projectid"]}`)
+      this.curProject = params["projectid"];
       this.initializerGalleryData();
     })
+
+    
   }
 
   // for affecting view child
@@ -75,9 +88,9 @@ export class GalleryComponent implements OnInit {
         },
         error(msg){
           console.log(msg);
+          that.projectGLRY.projectName = "No Such Project"
         }
       })
-
     }
     
   }

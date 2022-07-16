@@ -11,9 +11,9 @@
           <!-- <li><h3 class="special">Tanaya</h3></li> -->
           <li><img (click)="nameClick()" [ngClass]="{'special':clicked}" src="assets/Images/name_small.png" alt="" #myName></li>
           <li><a routerLink="/T/about">About</a></li>
-          <li><a [routerLink]="['/T/gallery','0']">Gallery</a></li>
-          <li><a [routerLink]="['/T/art-education','0']">Art Education</a></li>
-          <li><a [routerLink]="['/T/project-rants','0']">Projects/Journal</a></li>
+          <li><a [routerLink]="['/T/gallery','-1']">Gallery</a></li>
+          <li><a [routerLink]="['/T/art-education','-1']">Art Education</a></li>
+          <li><a [routerLink]="['/T/project-rants','-1']">Projects/Journal</a></li>
           <li><a routerLink="/T/contact">Contact</a></li>
         </ul>
       </div>

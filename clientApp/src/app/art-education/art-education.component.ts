@@ -2,6 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ArtProjectMain } from '../models/art-education';
 import { ArtEducationService } from '../services/art-education.service';
 import { GalleryProjectIDService } from '../services/gallery-project-id.service';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-art-education',
@@ -12,7 +14,8 @@ export class ArtEducationComponent implements OnInit {
 
   constructor(
     private ProjectIDService:GalleryProjectIDService,
-    private artEducationService:ArtEducationService
+    private artEducationService:ArtEducationService,
+    private route: ActivatedRoute,
   ) { }
 
   // **** variable which stores current Art Project ID from subscribe
@@ -32,15 +35,27 @@ export class ArtEducationComponent implements OnInit {
   artProject: ArtProjectMain = {
     "id":"-1",
     "art_media":[],
-    "projectDescription":"temp",
-    "projectName":"temp"
+    "projectDescription":"",
+    "projectName":""
   }
+
+
+    //private routerSubscription
+    private routeSub!: Subscription;
+
 
   ngOnInit(): void {
 
     // Setting the service for project ID subscription
     this.ProjectIDService.getArtMessage().subscribe(msg =>{
-      this.curArtProject = msg;
+      // this.curArtProject = msg;
+      // this.initializerArtData();
+    })
+
+    // this is additional text to get the ID directly from link
+    this.routeSub= this.route.params.subscribe(params => {
+      // alert(`This is from inside gallery: ${params["projectid"]}`)
+      this.curArtProject = params["artprojectid"];
       this.initializerArtData();
     })
   }
@@ -58,6 +73,7 @@ export class ArtEducationComponent implements OnInit {
         error(msg){
           // alert(`Error occurred: ${msg.status} : ${msg.details}`)
           console.log(msg);
+          that.artProject.projectName = "No Project found"
         }
       });
     }

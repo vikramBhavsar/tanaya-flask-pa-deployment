@@ -19,7 +19,14 @@ export class HomeComponent implements OnInit {
   }
 
 
+  ngAfterViewInit(){
+    setTimeout( ()=>{
+    this.clicked = true;
+    }, 3000)
+  }
+
+
   nameClick(){
-    this.clicked = !this.clicked;
+    // this.clicked = !this.clicked;
   }
 }
