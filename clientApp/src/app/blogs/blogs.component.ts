@@ -42,7 +42,7 @@ export class BlogsComponent implements OnInit {
   ngOnInit(): void {
     // Setting the service for BLOG ID subscription
     this.ProjectIDService.getBlogMessage().subscribe((msg) => {
-      this.curBlog = msg;
+      // this.curBlog = msg;
       // this.initializerBlogData();
     });
 

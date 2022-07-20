@@ -71,6 +71,7 @@ $secondary-color: #fec5bb;
 
   // Phone side bar in for mobile
   .phone-side-bar {
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -222,6 +223,11 @@ $secondary-color: #fec5bb;
       .phone-menu {
         display: block;
       }
+
+      .phone-side-bar{
+        display: block;
+      }
+  
   
       // This is the main section where side bar and gallery go.
       .divide-section {
@@ -311,6 +317,10 @@ $secondary-color: #fec5bb;
   .container {
     // This is the hamburger menu
     .phone-menu {
+      display: block;
+    }
+
+    .phone-side-bar{
       display: block;
     }
 

@@ -16,7 +16,7 @@ import { BlogService } from '../services/blog.service';
 })
 export class MainAppComponent implements OnInit {
   // This is for small phone menu
-  hamburger: boolean = false;
+  hamburger: boolean = true;
 
   // Access token for login and authentication
   access: string = '';
