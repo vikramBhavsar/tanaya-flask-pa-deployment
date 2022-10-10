@@ -596,6 +596,9 @@ $secondary-color: #fec5bb;
   $image-width: 30rem;
   $image-height: 30rem;
 
+
+
+
   .container {
     // Special CSS for opening a full screen image
     .opened-img {
@@ -605,6 +608,10 @@ $secondary-color: #fec5bb;
           font-size: 1.2rem;
         }
       }
+    }
+
+    p {
+      font-size: 1.1rem;
     }
 
     // This is the hamburger menu
@@ -643,7 +650,7 @@ $secondary-color: #fec5bb;
 
           .img-description-long {
             padding: 1rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
           }
         }
       }
@@ -698,7 +705,7 @@ $secondary-color: #fec5bb;
 
           .img-description-long {
             padding: 1rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
           }
         }
       }
