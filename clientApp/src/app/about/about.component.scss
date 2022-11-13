@@ -30,7 +30,13 @@
     justify-content: center;
     align-items: center;
 
-    .inside-content {
+    .grid-container{
+      display: grid;
+      width: 100%;
+      // height: 100%;
+      grid-template-columns: 1fr;
+
+      .inside-content {
         margin-bottom: 2rem;
       .with-image {
         display: grid;
@@ -81,6 +87,10 @@
         }
       }
     }
+
+    }
+
+
   }
 }
 
@@ -91,47 +101,51 @@
 @media only screen and (max-width: 767px) {
     .container {
         .content {
-          .inside-content {
-            .with-image {
-              grid-template-columns: 1fr;
-      
-              .text-section {
-                grid-row-start: 1;
-              }
-      
-              .image-side {
-                grid-row-start: 2;
-              }
-            }
-          }
-      
-          .inside-content:nth-of-type(even) {
-            .with-image {
+
+          .grid-container{
+            .inside-content {
+              .with-image {
                 grid-template-columns: 1fr;
-              .text-section {
-                text-align: left;
-                grid-column-start: 1;
+        
+                .text-section {
+                  grid-row-start: 1;
+                }
+        
+                .image-side {
+                  grid-row-start: 2;
+                }
               }
-      
-              .image-side {
-                grid-column-start: 1;
+            }
+        
+            .inside-content:nth-of-type(even) {
+              .with-image {
+                  grid-template-columns: 1fr;
+                .text-section {
+                  text-align: left;
+                  grid-column-start: 1;
+                }
+        
+                .image-side {
+                  grid-column-start: 1;
+                }
+              }
+            }
+        
+            .inside-content:nth-of-type(odd) {
+              .with-image {
+                  grid-template-columns: 1fr;
+                .text-section {
+                  text-align: left;
+                  grid-column-start: 1;
+                }
+        
+                .image-side {
+                  grid-column-start: 1;
+                }
               }
             }
           }
-      
-          .inside-content:nth-of-type(odd) {
-            .with-image {
-                grid-template-columns: 1fr;
-              .text-section {
-                text-align: left;
-                grid-column-start: 1;
-              }
-      
-              .image-side {
-                grid-column-start: 1;
-              }
-            }
-          }
+
         }
       }
   }

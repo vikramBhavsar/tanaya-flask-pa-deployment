@@ -1,26 +1,28 @@
 <div class="container">
   <div class="content">
-    <div class="inside-content" *ngFor="let aboutSec of aboutContents">
-      <div class="with-image" *ngIf="aboutSec.mediaFile?.toString() != undefined">
 
-        <div class="text-section">
+    <div class="grid-container">
+      <div class="inside-content" *ngFor="let aboutSec of aboutContents">
+        <div class="with-image" *ngIf="aboutSec.mediaFile?.toString() != undefined">
+  
+          <div class="text-section">
+            <h2 *ngIf="aboutSec.about_heading?.toString() != undefined">
+              {{ aboutSec.about_heading }}
+            </h2>
+            <p [innerHTML]="aboutSec.about_content | markdown"></p>
+          </div>
+  
+          <div class="image-side">
+            <img [src]="aboutSec.mediaFile" alt="" />
+          </div>
+        </div>
+  
+        <div class="without-image" *ngIf="aboutSec.mediaFile?.toString() == undefined">
           <h2 *ngIf="aboutSec.about_heading?.toString() != undefined">
             {{ aboutSec.about_heading }}
           </h2>
           <p [innerHTML]="aboutSec.about_content | markdown"></p>
         </div>
-
-        <div class="image-side">
-          <img [src]="aboutSec.mediaFile" alt="" />
-        </div>
-      </div>
-
-      <div class="without-image" *ngIf="aboutSec.mediaFile?.toString() == undefined">
-        <h2 *ngIf="aboutSec.about_heading?.toString() != undefined">
-          {{ aboutSec.about_heading }}
-        </h2>
-        <p>hello</p>
-        <p [innerHTML]="aboutSec.about_content | markdown"></p>
       </div>
     </div>
   </div>
