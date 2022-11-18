@@ -24,6 +24,7 @@ $secondary-color: #fec5bb;
   height: 100vh;
   position: relative;
   text-align: justify;
+  // text-justify: inter-word;
 
   // Special CSS for opening a full screen image
   .opened-img {
@@ -144,11 +145,12 @@ $secondary-color: #fec5bb;
       text-transform: uppercase;
       font-size: 3rem;
       letter-spacing: 0.5rem;
+      text-align: left;
     }
 
     hr {
       text-align: center;
-      width: 80%;
+      width: 80%; 
       margin: 1rem;
     }
 
@@ -497,6 +499,11 @@ $secondary-color: #fec5bb;
     }
 
     .gallery-container {
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
       // Project section for single photos with description
       .project-section-single-photo {
         grid-template-columns: 1fr;
@@ -620,6 +627,12 @@ $secondary-color: #fec5bb;
     }
 
     .gallery-container {
+
+      h1 {
+        font-size: 2.3rem;
+      }
+
+
       // Project section for single photos with description
       .project-section-single-photo {
         grid-template-columns: 1fr;
