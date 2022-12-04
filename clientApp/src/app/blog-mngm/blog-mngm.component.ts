@@ -13,7 +13,9 @@ export class BlogMngmComponent implements OnInit {
   constructor(
     private blogService: BlogService,
     private ProjectIDService: GalleryProjectIDService
-  ) {}
+  ) {
+    
+  }
 
   // **** variable which stores current BLOG ID from subscribe
   // **** Provided by the parent component

@@ -15,11 +15,21 @@ export class BlogsComponent implements OnInit {
     private ProjectIDService: GalleryProjectIDService,
     private route: ActivatedRoute,
     private blogService: BlogService
-  ) {}
+  ) {
+    let that = this;
+    window.onpopstate = function () {
+
+      if(that.imageOpned){
+        that.closeModalImage();
+        history.go(1);
+      }
+    };
+  }
 
   // **** variable which stores current BLOG ID from subscribe
   // **** Provided by the parent component
   curBlog: string = '';
+  imageOpned:boolean = false;
 
   // **** VIEW CHILD USED FOR IMAGE MODAL
   @ViewChild('imgModal') imgModal!: ElementRef;
@@ -86,10 +96,12 @@ export class BlogsComponent implements OnInit {
     this.imgModal.nativeElement.classList.toggle('active');
     this.curImgLink = imgUrl;
     this.curImgStatus = imgDetails;
+    this.imageOpned = !this.imageOpned;
   }
 
   // FUNCTION TO CLOSE THE IMAGE
   closeModalImage() {
     this.imgModal.nativeElement.classList.toggle('active');
+    this.imageOpned = !this.imageOpned;
   }
 }

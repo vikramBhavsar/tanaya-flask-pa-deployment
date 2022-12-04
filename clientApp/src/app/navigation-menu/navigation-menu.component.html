@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="phone-side-bar phone-side-menu-active" #phone_side_menu>
+    <div class="side-bar-menu">
+      <ul>
+        <li>
+          <a routerLink="/home">Home</a>
+        </li>
+        <li *ngIf="access.length > 0">
+          <a routerLink="/projects-mngm">My Projects</a>
+        </li>
+
+        <!-- For Blog Management -->
+        <li *ngIf="access.length > 0">
+          <a [routerLink]="['/T/blog-mngm', -1]">Blog Management</a>
+        </li>
+
+        <li>
+          <a routerLink="/T/about">About</a>
+        </li>
+
+        <!-- Phone Menu for gallery -->
+        <li>
+          <div
+            *ngIf="
+              galleryActive;
+              then phoneGalleryBlock;
+              else phoneNonGalleryBlock
+            "
+          ></div>
+          <ng-template #phoneGalleryBlock>
+            <h3>Gallery</h3>
+
+            <ul *ngFor="let proj of projectList">
+              <li>
+                <a (click)="switchGallery(proj.id)">{{ proj.projectName }}</a>
+              </li>
+            </ul>
+          </ng-template>
+          <ng-template #phoneNonGalleryBlock>
+            <a routerLink="/menu/gallery">Gallery</a>
+          </ng-template>
+        </li>
+
+        <!-- Phone Menu for art education -->
+        <li>
+          <div
+            *ngIf="
+              artEducationActive;
+              then phoneArtProjectBlock;
+              else phonenonArtProjectBlock
+            "
+          ></div>
+          <ng-template #phoneArtProjectBlock>
+            <h3>Art Education</h3>
+
+            <ul *ngFor="let artProj of artProjectList">
+              <li>
+                <a (click)="switchArtProject(artProj.id)">{{
+                  artProj.projectName
+                }}</a>
+              </li>
+            </ul>
+          </ng-template>
+          <ng-template #phonenonArtProjectBlock>
+            <a routerLink="/menu/art-education">Art Education</a>
+          </ng-template>
+        </li>
+
+        <li>
+          <div
+            *ngIf="
+              isBlogActive;
+              then phoneBlogProjectBlock;
+              else phoneNonBlogProjectBlock
+            "
+          ></div>
+          <ng-template #phoneBlogProjectBlock>
+            <h3>Projects/Journal</h3>
+
+            <ul *ngFor="let blog of blogs">
+              <li>
+                <a (click)="switchBlog(blog.id)">{{ blog.blogName }}</a>
+              </li>
+            </ul>
+          </ng-template>
+          <ng-template #phoneNonBlogProjectBlock>
+            <a routerLink="/menu/project-rants">Projects/Journal</a>
+          </ng-template>
+        </li>
+
+        <li>
+          <a routerLink="/T/contact">Contact</a>
+        </li>
+
+        <li *ngIf="access.length > 0">
+          <a (click)="logout()">Logout</a>
+        </li>
+
+        <li *ngIf="access.length <= 0">
+          <a (click)="goToLogin()">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

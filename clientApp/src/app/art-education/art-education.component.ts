@@ -16,11 +16,21 @@ export class ArtEducationComponent implements OnInit {
     private ProjectIDService:GalleryProjectIDService,
     private artEducationService:ArtEducationService,
     private route: ActivatedRoute,
-  ) { }
+  ) { 
+    let that = this;
+    window.onpopstate = function () {
+
+      if(that.imageOpned){
+        that.closeModalImage();
+        history.go(1);
+      }
+    };
+  }
 
   // **** variable which stores current Art Project ID from subscribe
   // **** Provided by the parent component
   curArtProject:string = ''
+  imageOpned:boolean = false;
 
 
   // **** VIEW CHILD USED FOR IMAGE MODAL
@@ -86,11 +96,13 @@ export class ArtEducationComponent implements OnInit {
     this.imgModal.nativeElement.classList.toggle('active');
     this.curImgLink = imgUrl;
     this.curImgStatus = imgDetails;
+    this.imageOpned = !this.imageOpned;
   }
 
   // FUNCTION TO CLOSE THE IMAGE
   closeModalImage() {
     this.imgModal.nativeElement.classList.toggle('active');
+    this.imageOpned = !this.imageOpned;
   }
 
 }

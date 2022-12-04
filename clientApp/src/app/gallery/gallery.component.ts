@@ -1,6 +1,8 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { GalleryDataService } from '../services/gallery-data.service';
 import { ProjectGLRY, ServerData } from '../models/project-contents';
+import { LocationStrategy } from '@angular/common';
+
 
 import {
   ActivatedRoute,
@@ -23,8 +25,20 @@ export class GalleryComponent implements OnInit {
     private galleryService: GalleryDataService,
     private route: ActivatedRoute,
     private router: Router,
-    private ProjectIDService:GalleryProjectIDService
-  ) {}
+    private ProjectIDService:GalleryProjectIDService,
+  ) {
+    let that = this;
+    window.onpopstate = function () {
+
+      if(that.imageOpned){
+        that.closeModalImage();
+        history.go(1);
+      }
+    };
+  }
+
+  back():void{
+  }
 
   currentImg: number = 0;
 
@@ -34,6 +48,7 @@ export class GalleryComponent implements OnInit {
   // **** VARIABLES USED FOR OPENING THE IMAGE PROPERLY
   curImgLink: string = 'assets/Images/bg_1.png';
   curImgStatus: string = 'some wonderful text';
+  imageOpned:boolean = false;
 
   // **** VARIABLES FOR PROJECT SELECTION SECTION WISE **** //
   curProject: string = '';
@@ -49,9 +64,17 @@ export class GalleryComponent implements OnInit {
     "sections":[],
   }
 
-  public ngOnDestroy():void{
-
+  goToTop(){
+    var scrollElem= document.querySelector('#moveTop');
+    if(scrollElem){
+      scrollElem.scrollIntoView(); 
+    }
   }
+
+  // @HostListener('window:popstate',['$event'])
+  // onPopState(event:Event){
+  //   alert(`Back button is pressed: ${event}  and ${history.length}`);
+  // }
 
   ngOnInit(): void {
 
@@ -66,10 +89,16 @@ export class GalleryComponent implements OnInit {
       // alert(`This is from inside gallery: ${params["projectid"]}`)
       this.curProject = params["projectid"];
       this.initializerGalleryData();
+      
+
+      this.goToTop()
+
     })
 
     
   }
+
+
 
   // for affecting view child
   ngAfterViewInit(): void {
@@ -129,6 +158,7 @@ export class GalleryComponent implements OnInit {
   // Function to open image
   openImage(imgUrl: string, imgDetails: string) {
     this.imgModal.nativeElement.classList.toggle('active');
+    this.imageOpned = !this.imageOpned;
     this.curImgLink = imgUrl;
     this.curImgStatus = imgDetails;
   }
@@ -136,5 +166,6 @@ export class GalleryComponent implements OnInit {
   // FUNCTION TO CLOSE THE IMAGE
   closeModalImage() {
     this.imgModal.nativeElement.classList.toggle('active');
+    this.imageOpned = !this.imageOpned;
   }
 }
