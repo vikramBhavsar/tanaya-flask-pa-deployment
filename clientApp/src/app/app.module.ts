@@ -21,6 +21,7 @@ import { SectionUpDelComponent } from './section-up-del/section-up-del.component
 import { ArtEducationComponent } from './art-education/art-education.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { BlogMngmComponent } from './blog-mngm/blog-mngm.component';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BlogMngmComponent } from './blog-mngm/blog-mngm.component';
     SectionUpDelComponent,
     ArtEducationComponent,
     BlogsComponent,
-    BlogMngmComponent,  
+    BlogMngmComponent,
+    NavigationMenuComponent,  
     
   ],
   imports: [

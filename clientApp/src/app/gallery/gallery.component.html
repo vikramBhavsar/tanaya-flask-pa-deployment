@@ -1,16 +1,18 @@
 <div *ngIf="curProject != '-1'; then correctProject else backgroundImage"></div>
+
 <ng-template #correctProject>
+  <span id="moveTop"></span>
   <div class="container" *ngIf="curProject != '-1'">
     <!-- Image Modal to view enlarged Image. -->
     <div class="opened-img" #imgModal (click)="closeModalImage()">
   
   
       <!-- Redundant button  -->
-      <!-- <div class="btn-div">
+      <div class="btn-div">
         <button (click)="closeModalImage()">
           <i class="fa-solid fa-xmark"></i>
         </button>
-      </div> -->
+      </div>
   
       <div class="img-container">
         <img src="{{ curImgLink }}" alt="" />
@@ -327,9 +329,8 @@
         </div>
       </div>
     </div>
-  </div>
-  
-
+  </div>  
+ 
 </ng-template>
 
 
@@ -337,7 +338,7 @@
 
 <ng-template #backgroundImage>
   <div class="gif-container">
-    <img src="assets/Images/loading.gif" alt="">
+    <h3>Incorrect URL</h3>
   </div>
 </ng-template>
 

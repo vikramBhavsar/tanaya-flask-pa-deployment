@@ -14,6 +14,8 @@ import { SectionUpDelComponent } from './section-up-del/section-up-del.component
 import { ArtEducationComponent } from './art-education/art-education.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { BlogMngmComponent } from './blog-mngm/blog-mngm.component';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +24,20 @@ const routes: Routes = [
   { path: 'sectiom-mngm/:projectid', component: SectionMngmComponent },
   { path: 'sectiom-ud/:sectionid', component: SectionUpDelComponent },
   { path: 'blog-create', component: BlogMngmComponent },
+  { path: 'menu', component: NavigationMenuComponent,children:[
+    {
+      path:'gallery',
+      component:  NavigationMenuComponent
+    },
+    {
+      path:'art-education',
+      component:  NavigationMenuComponent
+    },
+    {
+      path:'project-rants',
+      component:  NavigationMenuComponent
+    },
+  ] },
   { path: 'T', component:  MainAppComponent , children:[
     {
       path:'gallery/:projectid',
