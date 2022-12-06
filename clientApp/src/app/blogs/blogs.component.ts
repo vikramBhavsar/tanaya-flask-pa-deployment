@@ -18,8 +18,7 @@ export class BlogsComponent implements OnInit {
   ) {
     let that = this;
     window.onpopstate = function () {
-
-      if(that.imageOpned){
+      if (that.imageOpned) {
         that.closeModalImage();
         history.go(1);
       }
@@ -29,7 +28,7 @@ export class BlogsComponent implements OnInit {
   // **** variable which stores current BLOG ID from subscribe
   // **** Provided by the parent component
   curBlog: string = '';
-  imageOpned:boolean = false;
+  imageOpned: boolean = false;
 
   // **** VIEW CHILD USED FOR IMAGE MODAL
   @ViewChild('imgModal') imgModal!: ElementRef;
@@ -37,7 +36,6 @@ export class BlogsComponent implements OnInit {
   // **** VARIABLES USED FOR OPENING THE IMAGE PROPERLY
   curImgLink: string = '';
   curImgStatus: string = 'some wonderful text';
-
 
   //private routerSubscription
   private routeSub!: Subscription;
@@ -49,6 +47,13 @@ export class BlogsComponent implements OnInit {
     isPublished: false,
   };
 
+  goToTop() {
+    var scrollElem = document.querySelector('#moveTop');
+    if (scrollElem) {
+      scrollElem.scrollIntoView();
+    }
+  }
+
   ngOnInit(): void {
     // Setting the service for BLOG ID subscription
     this.ProjectIDService.getBlogMessage().subscribe((msg) => {
@@ -56,22 +61,18 @@ export class BlogsComponent implements OnInit {
       // this.initializerBlogData();
     });
 
-
-
     // this is additional text to get the ID directly from link
-    this.routeSub= this.route.params.subscribe(params => {
+    this.routeSub = this.route.params.subscribe((params) => {
       // alert(`This is from inside gallery: ${params["projectid"]}`)
-      this.curBlog = params["blogID"];
+      this.curBlog = params['blogID'];
       this.initializerBlogData();
-    })
 
-    
+      this.goToTop();
+    });
   }
 
   initializerBlogData() {
-
-
-    if(this.curBlog != '-1'){
+    if (this.curBlog != '-1') {
       try {
         let that = this;
         this.blogService.getSingleBlogDetails(this.curBlog).subscribe({
@@ -84,11 +85,8 @@ export class BlogsComponent implements OnInit {
             console.log(msg);
           },
         });
-        
-      } catch (error) {
-      }
+      } catch (error) {}
     }
-
   }
 
   // Function to open image
