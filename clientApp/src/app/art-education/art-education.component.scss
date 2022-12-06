@@ -4,8 +4,7 @@ $primary-color: #f8efe6;
 $primary-dark: #333;
 $secondary-color: #fec5bb;
 
-
-.gif-container{
+.gif-container {
   display: flex;
   height: 90vh;
   width: 100%;
@@ -35,6 +34,8 @@ $secondary-color: #fec5bb;
 
     .btn-div {
       position: relative;
+      z-index: 15;
+      background: transparent;
 
       button {
         position: fixed;
@@ -91,21 +92,20 @@ $secondary-color: #fec5bb;
         z-index: 12;
         background: transparent;
       }
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.8);
-      }
     }
 
     &.active {
       background: transparent;
       visibility: visible;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.8);
     }
   }
 
@@ -214,10 +214,25 @@ $secondary-color: #fec5bb;
   .container {
     // Special CSS for opening a full screen image
     .opened-img {
+      .btn-div{
+        position: relative;
+        display: flex;
+        justify-content: end;
+        button{
+          margin-top: 0.5rem;
+          position: relative;
+        }
+      }
+
       .img-container {
+        img{
+          max-height: 70%;
+        }
+
         p {
           padding: 1rem;
-          font-size: 1.2rem;
+          // font-size: 1.2rem;
+          overflow-y: scroll;
         }
       }
     }
@@ -242,17 +257,33 @@ $secondary-color: #fec5bb;
   .container {
     // Special CSS for opening a full screen image
     .opened-img {
+      .btn-div{
+        position: relative;
+        display: flex;
+        justify-content: end;
+        button{
+          margin-top: 0.5rem;
+          position: relative;
+        }
+      }
+
+
       .img-container {
+        img{
+          max-height: 70%;
+        }
+
+
         p {
           padding: 1rem;
-          font-size: 1.2rem;
+          // font-size: 1.2rem;
+          overflow-y: scroll;
         }
       }
     }
 
     .art-container {
-
-      p{
+      p {
         font-size: 1.1rem;
       }
       // Project section for multiple images

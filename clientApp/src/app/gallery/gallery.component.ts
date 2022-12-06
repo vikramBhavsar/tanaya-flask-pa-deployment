@@ -1,17 +1,17 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import { GalleryDataService } from '../services/gallery-data.service';
 import { ProjectGLRY, ServerData } from '../models/project-contents';
 import { LocationStrategy } from '@angular/common';
 
-
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  Router,
-} from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { GalleryProjectIDService } from '../services/gallery-project-id.service';
 import { Subscription } from 'rxjs';
-
 
 @Component({
   selector: 'app-gallery',
@@ -19,25 +19,19 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
-
-
   constructor(
     private galleryService: GalleryDataService,
     private route: ActivatedRoute,
     private router: Router,
-    private ProjectIDService:GalleryProjectIDService,
+    private ProjectIDService: GalleryProjectIDService
   ) {
     let that = this;
     window.onpopstate = function () {
-
-      if(that.imageOpned){
+      if (that.imageOpned) {
         that.closeModalImage();
         history.go(1);
       }
     };
-  }
-
-  back():void{
   }
 
   currentImg: number = 0;
@@ -48,26 +42,25 @@ export class GalleryComponent implements OnInit {
   // **** VARIABLES USED FOR OPENING THE IMAGE PROPERLY
   curImgLink: string = 'assets/Images/bg_1.png';
   curImgStatus: string = 'some wonderful text';
-  imageOpned:boolean = false;
+  imageOpned: boolean = false;
 
   // **** VARIABLES FOR PROJECT SELECTION SECTION WISE **** //
   curProject: string = '';
 
-
   //private routerSubscription
   private routeSub!: Subscription;
 
-  projectGLRY :ProjectGLRY = {
-    "id": "-1",
-    "projectName": "",
-    "projectDescription": "",
-    "sections":[],
-  }
+  projectGLRY: ProjectGLRY = {
+    id: '-1',
+    projectName: '',
+    projectDescription: '',
+    sections: [],
+  };
 
-  goToTop(){
-    var scrollElem= document.querySelector('#moveTop');
-    if(scrollElem){
-      scrollElem.scrollIntoView(); 
+  goToTop() {
+    var scrollElem = document.querySelector('#moveTop');
+    if (scrollElem) {
+      scrollElem.scrollIntoView();
     }
   }
 
@@ -77,60 +70,49 @@ export class GalleryComponent implements OnInit {
   // }
 
   ngOnInit(): void {
-
     // Setting the service for project ID subscription
-    this.ProjectIDService.getMessage().subscribe(msg =>{
+    this.ProjectIDService.getMessage().subscribe((msg) => {
       // this.curProject = msg;
       // this.initializerGalleryData();
-    })
+    });
 
     // this is additional text to get the ID directly from link
-    this.routeSub= this.route.params.subscribe(params => {
+    this.routeSub = this.route.params.subscribe((params) => {
       // alert(`This is from inside gallery: ${params["projectid"]}`)
-      this.curProject = params["projectid"];
+      this.curProject = params['projectid'];
       this.initializerGalleryData();
-      
 
-      this.goToTop()
-
-    })
-
-    
+      this.goToTop();
+    });
   }
-
-
 
   // for affecting view child
-  ngAfterViewInit(): void {
-  }
+  ngAfterViewInit(): void {}
 
   initializerGalleryData() {
-    if(this.curProject.toString() != '-1'){
+    if (this.curProject.toString() != '-1') {
       let that = this;
 
       this.galleryService.getGalleryData(this.curProject.toString()).subscribe({
-        next(res){
+        next(res) {
           that.projectGLRY = that.processResultsForLayout(res);
           console.log(res);
-          console.log("Below is Server Data received: ");
+          console.log('Below is Server Data received: ');
           console.log(that.projectGLRY);
         },
-        error(msg){
+        error(msg) {
           console.log(msg);
-          that.projectGLRY.projectName = "No Such Project"
-        }
-      })
+          that.projectGLRY.projectName = 'No Such Project';
+        },
+      });
     }
-    
   }
 
-
   // **** THis function will process the data and put proper layout for content
-  processResultsForLayout(resultsData: ProjectGLRY): ProjectGLRY{
-
+  processResultsForLayout(resultsData: ProjectGLRY): ProjectGLRY {
     ///
     // This function should check for following
-        // ***** DIFFERENT TYPES OF SECTIONS ***** //
+    // ***** DIFFERENT TYPES OF SECTIONS ***** //
     // (MG) -- multiple gallery contents
     // (SD) -- Single image with description
     // (S) -- Single Image with no description (currently looks okay)
@@ -138,22 +120,30 @@ export class GalleryComponent implements OnInit {
     // (2W) -- Two images without description
     ///
 
-    for(var i = 0; i < resultsData.sections.length; i++){
-      if(resultsData.sections[i].mediaContent.length  == 1 && resultsData.sections[i].sectionDescription.length == 0){
+    for (var i = 0; i < resultsData.sections.length; i++) {
+      if (
+        resultsData.sections[i].mediaContent.length == 1 &&
+        resultsData.sections[i].sectionDescription.length == 0
+      ) {
         resultsData.sections[i].sectionDisplayType = 'S';
-      }else if(resultsData.sections[i].mediaContent.length  == 1 && resultsData.sections[i].sectionDescription.length > 1){
+      } else if (
+        resultsData.sections[i].mediaContent.length == 1 &&
+        resultsData.sections[i].sectionDescription.length > 1
+      ) {
         resultsData.sections[i].sectionDisplayType = 'SD';
-      }else if(resultsData.sections[i].mediaContent.length == 3){
+      } else if (resultsData.sections[i].mediaContent.length == 3) {
         resultsData.sections[i].sectionDisplayType = '3W';
-      }else if(resultsData.sections[i].mediaContent.length  == 2 && resultsData.sections[i].sectionDescription.length == 0){
+      } else if (
+        resultsData.sections[i].mediaContent.length == 2 &&
+        resultsData.sections[i].sectionDescription.length == 0
+      ) {
         resultsData.sections[i].sectionDisplayType = '2W';
-      }else{
+      } else {
         resultsData.sections[i].sectionDisplayType = 'MG';
       }
     }
     return resultsData;
-  } 
-
+  }
 
   // Function to open image
   openImage(imgUrl: string, imgDetails: string) {

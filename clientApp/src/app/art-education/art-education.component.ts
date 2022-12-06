@@ -8,19 +8,17 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-art-education',
   templateUrl: './art-education.component.html',
-  styleUrls: ['./art-education.component.scss']
+  styleUrls: ['./art-education.component.scss'],
 })
 export class ArtEducationComponent implements OnInit {
-
   constructor(
-    private ProjectIDService:GalleryProjectIDService,
-    private artEducationService:ArtEducationService,
-    private route: ActivatedRoute,
-  ) { 
+    private ProjectIDService: GalleryProjectIDService,
+    private artEducationService: ArtEducationService,
+    private route: ActivatedRoute
+  ) {
     let that = this;
     window.onpopstate = function () {
-
-      if(that.imageOpned){
+      if (that.imageOpned) {
         that.closeModalImage();
         history.go(1);
       }
@@ -29,67 +27,67 @@ export class ArtEducationComponent implements OnInit {
 
   // **** variable which stores current Art Project ID from subscribe
   // **** Provided by the parent component
-  curArtProject:string = ''
-  imageOpned:boolean = false;
-
+  curArtProject: string = '';
+  imageOpned: boolean = false;
 
   // **** VIEW CHILD USED FOR IMAGE MODAL
   @ViewChild('imgModal') imgModal!: ElementRef;
-
-
 
   // **** VARIABLES USED FOR OPENING THE IMAGE PROPERLY
   curImgLink: string = '';
   curImgStatus: string = 'some wonderful text';
 
   artProject: ArtProjectMain = {
-    "id":"-1",
-    "art_media":[],
-    "projectDescription":"",
-    "projectName":""
+    id: '-1',
+    art_media: [],
+    projectDescription: '',
+    projectName: '',
+  };
+
+  //private routerSubscription
+  private routeSub!: Subscription;
+
+  goToTop() {
+    var scrollElem = document.querySelector('#moveTop');
+    if (scrollElem) {
+      scrollElem.scrollIntoView();
+    }
   }
-
-
-    //private routerSubscription
-    private routeSub!: Subscription;
-
 
   ngOnInit(): void {
-
     // Setting the service for project ID subscription
-    this.ProjectIDService.getArtMessage().subscribe(msg =>{
+    this.ProjectIDService.getArtMessage().subscribe((msg) => {
       // this.curArtProject = msg;
       // this.initializerArtData();
-    })
+    });
 
     // this is additional text to get the ID directly from link
-    this.routeSub= this.route.params.subscribe(params => {
+    this.routeSub = this.route.params.subscribe((params) => {
       // alert(`This is from inside gallery: ${params["projectid"]}`)
-      this.curArtProject = params["artprojectid"];
+      this.curArtProject = params['artprojectid'];
       this.initializerArtData();
-    })
+      this.goToTop();
+    });
   }
-
 
   // Gets the Art data required to show the images
-  initializerArtData(){
-
-    if(this.curArtProject != '-1'){
+  initializerArtData() {
+    if (this.curArtProject != '-1') {
       let that = this;
-      this.artEducationService.getArtEducationProjectDetails(this.curArtProject).subscribe({
-        next(res){
-          that.artProject = res;
-        },
-        error(msg){
-          // alert(`Error occurred: ${msg.status} : ${msg.details}`)
-          console.log(msg);
-          that.artProject.projectName = "No Project found"
-        }
-      });
+      this.artEducationService
+        .getArtEducationProjectDetails(this.curArtProject)
+        .subscribe({
+          next(res) {
+            that.artProject = res;
+          },
+          error(msg) {
+            // alert(`Error occurred: ${msg.status} : ${msg.details}`)
+            console.log(msg);
+            that.artProject.projectName = 'No Project found';
+          },
+        });
     }
-
   }
-
 
   // Function to open image
   openImage(imgUrl: string, imgDetails: string) {
@@ -104,5 +102,4 @@ export class ArtEducationComponent implements OnInit {
     this.imgModal.nativeElement.classList.toggle('active');
     this.imageOpned = !this.imageOpned;
   }
-
 }

@@ -1,14 +1,17 @@
 <div *ngIf="curArtProject != '-1'; then correctProject else backgroundImage"></div>
 
 <ng-template #correctProject>
+  <span id="moveTop"></span>
   <div class="container">
     <!-- Image Modal to view enlarged Image. -->
-    <div class="opened-img" #imgModal (click)="closeModalImage()">
-      <!-- <div class="btn-div">
+    <div class="opened-img" #imgModal>
+      
+      <!-- Redundant button  -->
+      <div class="btn-div">
         <button (click)="closeModalImage()">
           <i class="fa-solid fa-xmark"></i>
         </button>
-      </div> -->
+      </div>
   
       <div class="img-container">
         <img src="{{ curImgLink }}" alt="" />

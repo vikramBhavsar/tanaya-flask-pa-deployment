@@ -11,26 +11,17 @@ main {
   width: 100%;
   height: 100%;
 
-
   // for gif loading for blogs
-  .gif-container{
+  .gif-container {
     display: flex;
     height: 90vh;
     width: 100%;
     justify-content: center;
     align-items: center;
-  
-    img{
-      object-fit: contain;
-      width: 95%;
-      height: 95%;
-    }
   }
 
-
-
   img {
-    cursor: pointer;  
+    cursor: pointer;
   }
 
   .blog-container {
@@ -52,6 +43,8 @@ main {
 
       .btn-div {
         position: relative;
+        z-index: 15;
+        background: transparent;
 
         button {
           position: fixed;
@@ -108,21 +101,21 @@ main {
           z-index: 12;
           background: transparent;
         }
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba($color: #000000, $alpha: 0.8);
-        }
       }
 
       &.active {
         background: transparent;
         visibility: visible;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.8);
       }
     }
 
@@ -207,11 +200,10 @@ main {
         .image-group {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          
+
           gap: 1px;
 
-          .image-item{
-
+          .image-item {
             max-width: 80%;
             img {
               object-fit: contain;
@@ -219,7 +211,7 @@ main {
               height: 100%;
               text-align: end;
             }
-  
+
             small {
               text-align: center;
               display: block;
@@ -227,15 +219,13 @@ main {
             }
           }
 
-
-          .image-item:nth-child(even){
+          .image-item:nth-child(even) {
             justify-self: start;
           }
 
-          .image-item:nth-child(odd){
+          .image-item:nth-child(odd) {
             justify-self: end;
           }
-
         }
       }
     }
@@ -246,6 +236,30 @@ main {
 // For Tablets
 // @media only screen and (min-width: 980px) and (max-width: 1023px) { -- original tablet
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
+  main {
+    // Special CSS for opening a full screen image
+    .blog-container {
+      .opened-img {
+        .btn-div {
+          position: relative;
+          display: flex;
+          justify-content: end;
+          button {
+            margin-top: 0.5rem;
+            position: relative;
+          }
+        }
+
+        .img-container {
+          p {
+            padding: 1rem;
+            // font-size: 1.2rem;
+            overflow-y: scroll;
+          }
+        }
+      }
+    }
+  }
 }
 
 // // For mobile Landscape
@@ -256,16 +270,31 @@ main {
 @media only screen and (max-width: 767px) {
   main {
     // Special CSS for opening a full screen image
-    .opened-img {
-      .img-container {
-        p {
-          padding: 1rem;
-          font-size: 1.2rem;
+    .blog-container {
+      .opened-img {
+        .btn-div {
+          position: relative;
+          display: flex;
+          justify-content: end;
+          button {
+            margin-top: 0.5rem;
+            position: relative;
+          }
+        }
+
+        .img-container {
+          img {
+            max-height: 80%;
+          }
+
+          p {
+            padding: 1rem;
+            // font-size: 1.2rem;
+            overflow-y: scroll;
+          }
         }
       }
-    }
 
-    .blog-container {
       .blog-sections {
         .text-section {
           font-size: 1.1rem;
@@ -276,7 +305,7 @@ main {
             display: grid;
             grid-template-columns: 1fr;
 
-            .image-item{
+            .image-item {
               img {
                 // object-fit: contain;
                 width: 100%;
@@ -284,14 +313,13 @@ main {
               }
             }
 
-            .image-item:nth-child(even){
-              justify-self: center;
-            }
-  
-            .image-item:nth-child(odd){
+            .image-item:nth-child(even) {
               justify-self: center;
             }
 
+            .image-item:nth-child(odd) {
+              justify-self: center;
+            }
           }
         }
       }
