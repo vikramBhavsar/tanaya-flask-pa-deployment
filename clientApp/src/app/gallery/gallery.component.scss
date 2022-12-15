@@ -38,9 +38,13 @@ $secondary-color: #fec5bb;
       position: relative;
       z-index: 15;
       background: transparent;
+      display: flex;
+      justify-content: end;
+      margin-right: 1rem;
+      margin-top: 1rem;
 
       button {
-        position: fixed;
+        // position: fixed;
         right: 2rem;
         top: 1rem;
         width: 2rem;
