@@ -8,13 +8,15 @@
   
   
       <!-- Redundant button  -->
-      <div class="btn-div">
-        <button (click)="closeModalImage()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-  
+      
       <div class="img-container">
+
+        <div class="btn-div">
+          <button (click)="closeModalImage()">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
         <img src="{{ curImgLink }}" alt="" />
         <p>{{ curImgStatus }}</p>
       </div>
