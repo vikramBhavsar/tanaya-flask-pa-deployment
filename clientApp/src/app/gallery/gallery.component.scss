@@ -4,8 +4,7 @@ $primary-color: #f8efe6;
 $primary-dark: #333;
 $secondary-color: #fec5bb;
 
-
-.gif-container{
+.gif-container {
   display: flex;
   height: 90vh;
   width: 100%;
@@ -22,7 +21,7 @@ $secondary-color: #fec5bb;
 
   // Special CSS for opening a full screen image
   .opened-img {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     position: fixed;
     left: 0;
     top: 0;
@@ -34,8 +33,6 @@ $secondary-color: #fec5bb;
     z-index: 11;
     // display: none;
     visibility: collapse;
-
-
 
     .img-container {
       z-index: 12;
@@ -55,7 +52,6 @@ $secondary-color: #fec5bb;
         background: transparent;
       }
 
-
       .btn-div {
         width: 95%;
         max-height: 10%;
@@ -64,7 +60,6 @@ $secondary-color: #fec5bb;
         justify-content: end;
         align-items: flex-end;
 
-  
         button {
           margin-right: 2rem;
           margin-top: 2rem;
@@ -73,11 +68,11 @@ $secondary-color: #fec5bb;
           font-size: 2rem;
           color: $primary-color;
           z-index: 15;
-  
+
           i {
             background: transparent;
           }
-  
+
           &:hover {
             opacity: 0.8;
             cursor: pointer;
@@ -100,8 +95,6 @@ $secondary-color: #fec5bb;
         z-index: 12;
         background: transparent;
       }
-
-
     }
 
     &.active {
@@ -153,7 +146,7 @@ $secondary-color: #fec5bb;
 
     hr {
       text-align: center;
-      width: 80%; 
+      width: 80%;
       margin: 1rem;
     }
 
@@ -489,17 +482,14 @@ $secondary-color: #fec5bb;
   .container {
     // Special CSS for opening a full screen image
     .opened-img {
-
       .img-container {
-
-        .btn-div{
-          button{
+        .btn-div {
+          button {
             margin-top: 0.5rem;
           }
         }
 
-
-        img{
+        img {
           max-height: 70%;
         }
         p {
@@ -510,14 +500,12 @@ $secondary-color: #fec5bb;
       }
     }
 
-    
     // This is the hamburger menu
     .phone-menu {
       display: block;
     }
 
     .gallery-container {
-
       h1 {
         font-size: 2.4rem;
       }
@@ -534,7 +522,6 @@ $secondary-color: #fec5bb;
             width: 100%;
             height: 100%;
           }
-          
 
           .img-overlay {
             padding: 1rem;
@@ -621,25 +608,17 @@ $secondary-color: #fec5bb;
   $image-width: 30rem;
   $image-height: 30rem;
 
-
-
-
   .container {
     // Special CSS for opening a full screen image
     .opened-img {
-
-
-
       .img-container {
-
-        .btn-div{
-          button{
+        .btn-div {
+          button {
             margin-top: 0.5rem;
           }
         }
 
-
-        img{
+        img {
           max-height: 70%;
         }
         p {
@@ -660,11 +639,9 @@ $secondary-color: #fec5bb;
     }
 
     .gallery-container {
-
       h1 {
         font-size: 2.3rem;
       }
-
 
       // Project section for single photos with description
       .project-section-single-photo {
@@ -679,11 +656,10 @@ $secondary-color: #fec5bb;
             height: 100%;
           }
 
-
           .img-overlay {
             padding: 1rem;
 
-            img{
+            img {
               height: 80%;
             }
 
@@ -706,14 +682,13 @@ $secondary-color: #fec5bb;
         .video-overlay {
           width: 100%;
           height: 100%;
-
         }
 
         .img-overlay {
           width: 95%;
           height: 95%;
 
-          img{
+          img {
             height: 80%;
           }
         }
