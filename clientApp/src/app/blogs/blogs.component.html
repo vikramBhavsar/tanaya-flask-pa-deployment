@@ -47,13 +47,15 @@
           </div>
 
           <div class="media-section" *ngSwitchCase="'V'">
-            <div class="iframe-container">
-              <iframe
-                [src]="bSec.videoURL | safeUrl: 'resourceUrl'"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-              <small [innerText]="bSec.mediaDes"></small>
+            <div class="video-container">
+                <div class="iframe-container">
+                  <iframe
+                    [src]="bSec.videoURL | safeUrl: 'resourceUrl'"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                  <small [innerText]="bSec.mediaDes"></small>
+                </div>
             </div>
           </div>
 
