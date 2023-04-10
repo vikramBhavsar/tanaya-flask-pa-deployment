@@ -176,7 +176,7 @@ main {
             grid-template-columns: 30rem;
             position: relative;
             overflow: hidden;
-            width: 25rem;
+            width: 45rem;
             height: 25rem;
 
             iframe {
@@ -209,10 +209,6 @@ main {
         justify-content: center;
 
         .image-group {
-          // display: grid;
-          // grid-template-columns: 1fr 1fr 1fr;
-          // place-items: center;
-          // gap: 1px;
 
           display: flex;
           flex-direction: row;
@@ -238,14 +234,6 @@ main {
               font-size: 1rem;
             }
           }
-
-          // .image-item:nth-child(even) {
-          //   justify-self: start;
-          // }
-
-          // .image-item:nth-child(odd) {
-          //   justify-self: end;
-          // }
         }
       }
     }
