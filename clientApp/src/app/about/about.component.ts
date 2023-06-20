@@ -15,6 +15,7 @@ export class AboutComponent implements OnInit {
     about_heading :'',
     about_content :'',
     mediaFile :'',
+    videoLink :'',
   }]
   ngOnInit(): void {
 

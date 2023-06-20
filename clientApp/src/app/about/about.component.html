@@ -3,7 +3,7 @@
 
     <div class="grid-container">
       <div class="inside-content" *ngFor="let aboutSec of aboutContents">
-        <div class="with-image" *ngIf="aboutSec.mediaFile?.toString() != undefined">
+        <div class="with-image" *ngIf="aboutSec.mediaFile?.toString() != undefined || aboutSec.videoLink.length > 0 ">
   
           <div class="text-section">
             <h2 *ngIf="aboutSec.about_heading?.toString() != undefined">
@@ -12,12 +12,22 @@
             <p [innerHTML]="aboutSec.about_content | markdown"></p>
           </div>
   
-          <div class="image-side">
+          <div class="image-side" *ngIf="aboutSec.mediaFile?.toString() != undefined">
             <img [src]="aboutSec.mediaFile" alt="" />
           </div>
+
+          <div class="video-container" *ngIf="aboutSec.videoLink.length > 0">
+            <div class="iframe-container">
+              <iframe
+                [src]="aboutSec.videoLink | safeUrl: 'resourceUrl'"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+        </div>
         </div>
   
-        <div class="without-image" *ngIf="aboutSec.mediaFile?.toString() == undefined">
+        <div class="without-image" *ngIf="aboutSec.mediaFile?.toString() == undefined && aboutSec.videoLink.length == 0  ">
           <h2 *ngIf="aboutSec.about_heading?.toString() != undefined">
             {{ aboutSec.about_heading }}
           </h2>
