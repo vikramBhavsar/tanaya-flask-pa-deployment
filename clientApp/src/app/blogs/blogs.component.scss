@@ -244,7 +244,9 @@ main {
 // For Tablets
 // @media only screen and (min-width: 980px) and (max-width: 1023px) { -- original tablet
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
+
   main {
+
     // Special CSS for opening a full screen image
     .blog-container {
       .opened-img {
@@ -304,6 +306,17 @@ main {
         .text-section {
           font-size: 1.1rem;
         }
+
+        .media-section {
+          .video-container {
+            .iframe-container {
+              // Made edit to accomodate phones for showing youtube video
+              max-width: 20rem;
+              max-height: 15rem;
+            }
+          }
+        }
+        
         .media-group-section {
           width: 100%;
           .image-group {
