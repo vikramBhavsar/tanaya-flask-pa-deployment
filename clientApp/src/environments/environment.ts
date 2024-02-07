@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseServerURL: 'http://127.0.0.1:8000/api/',
-  //baseServerURL: 'https://rrajtanaya.pythonanywhere.com/api/',
+  //baseServerURL: 'http://127.0.0.1:8000/api/',
+  baseServerURL: 'https://rrajtanaya.pythonanywhere.com/api/',
 };
 
 /*
